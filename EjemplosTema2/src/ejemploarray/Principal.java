@@ -9,7 +9,7 @@ public class Principal {
 
 		// En los arrays el Eclipse mete 0 en todas las posiciones del array,
 
-		int tam = 10, dos = 2, num = 0;
+		int tam = 10, num = 0;
 
 		int edades[] = new int[tam];
 		/*
