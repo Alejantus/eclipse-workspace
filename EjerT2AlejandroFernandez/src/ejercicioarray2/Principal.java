@@ -11,9 +11,9 @@ public class Principal {
 
 		// int enteros [] = {1,2,3,4,5,6,7,8,2,3};
 
-		for (int i = 1; i < enteros.length; i++) {
+		for (int i = 0; i < enteros.length; i++) {
 			mult = i * dos;
-			System.out.println(i);
+			System.out.println(mult);
 		}
 
 	}
