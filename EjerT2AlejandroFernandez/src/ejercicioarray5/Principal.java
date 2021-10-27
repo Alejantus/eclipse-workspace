@@ -1,4 +1,4 @@
-package ejercicioarray4;
+package ejercicioarray5;
 
 import java.util.Random;
 
@@ -13,7 +13,7 @@ public class Principal {
 		// Cuando Angel diga elemento no es el indice sino el valor del indice
 		// El .length indica el indice del array
 
-		int hasta = 0, desde = 0, tam = 0,op=0;
+		int hasta = 0, desde = 0, tam = 0,mayor=0,menor=0;
 
 		Random r = new Random(System.nanoTime());
 
@@ -32,14 +32,24 @@ public class Principal {
 				enteros[i] = r.nextInt(hasta - desde + 1) + desde;
 			}
 			
-			System.out.println("Diga el elemento que quiere ver");
-			op = Leer.datoInt();
-			if(op<enteros.length+1) {
-			System.out.println("El elemento es: "+enteros[op-1]);
-			}else {
-				System.out.println("Error");
+			mayor = enteros[0];
+			menor = enteros[0];
+			
+			for (int i = 1; i < enteros.length; i++) {
+				if(enteros[i]>mayor) {
+					mayor = enteros[i];
+				}
 			}
 			
+			for (int i = 0; i < enteros.length; i++) {
+				if (enteros[i]<menor) {
+					menor = enteros[i];
+				}
+			}
+			
+			System.out.println("El mayor valor del array es: "+mayor);
+			System.out.println("El menor valor del array es: "+menor);
+
 
 		} while (tam != 0);
 
