@@ -15,12 +15,13 @@ public class Principal {
 			System.out.println("¿Qué acción quieres realizar?");
 			System.out.println("1. Realizar media");
 			System.out.println("0. Salir");
+			opcion = Leer.datoInt();
 			for (int i = 0; i < enteros.length; i++) {
 				System.out.println("Introduzca un número");
 				num = Leer.datoInt();
 				suma += num;
 				if (num == 0) {
-					System.out.println("El número de 0 es de: " + (i + 1));
+					System.out.println("El número de 0 es de: " + (i+1));
 				}
 			}
 
