@@ -1,6 +1,5 @@
 package ejercicioarray5;
 
-import java.util.Iterator;
 import java.util.Random;
 
 import lectura.Leer;
