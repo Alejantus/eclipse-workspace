@@ -53,8 +53,12 @@ public class Principal {
 				a = Leer.datoDouble();
 				System.out.println("Introduzca un número");
 				b = Leer.datoDouble();
-				divi = a / b;
-				System.out.printf("El resultado es %.2f", divi);
+				if (a != 0 && b != 0) {
+					divi = a / b;
+					System.out.printf("El resultado es %.2f", divi);
+				}else {
+					System.out.println("Introduzca un número que no sea cero");
+				}
 				break;
 
 			default:
