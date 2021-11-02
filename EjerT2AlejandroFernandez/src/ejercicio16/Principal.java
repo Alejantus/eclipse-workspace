@@ -57,7 +57,7 @@ public class Principal {
 					divi = a / b;
 					System.out.printf("El resultado es %.2f", divi);
 				}else {
-					System.out.println("Introduzca un número que no sea cer");
+					System.out.println("Introduzca un número que no sea cero, por favor");
 				}
 				break;
 
