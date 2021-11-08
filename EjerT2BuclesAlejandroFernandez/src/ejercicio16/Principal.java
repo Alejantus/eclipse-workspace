@@ -8,7 +8,7 @@ public class Principal {
 		// TODO Auto-generated method stub
 
 		int opcion = 0;
-		double a = 0, b = 0, suma = 0, resta = 0, multi = 0, divi = 0;
+		double a = 0.0, b = 0.0, operacion = 0.0;
 
 		System.out.println("Bienvenido, en este programa vamos a hacer una mini-calculadora");
 
@@ -26,8 +26,8 @@ public class Principal {
 				a = Leer.datoDouble();
 				System.out.println("Introduzca un número");
 				b = Leer.datoDouble();
-				suma = a + b;
-				System.out.printf("El resultado es %.2f", suma);
+				operacion = a + b;
+				System.out.printf("El resultado es %.2f\n", operacion);
 				break;
 
 			case 2:
@@ -35,8 +35,8 @@ public class Principal {
 				a = Leer.datoDouble();
 				System.out.println("Introduzca un número");
 				b = Leer.datoDouble();
-				resta = a - b;
-				System.out.printf("El resultado es %.2f", resta);
+				operacion = a - b;
+				System.out.printf("El resultado es %.2f\n", operacion);
 				break;
 
 			case 3:
@@ -44,8 +44,8 @@ public class Principal {
 				a = Leer.datoDouble();
 				System.out.println("Introduzca un número");
 				b = Leer.datoDouble();
-				multi = a * b;
-				System.out.printf("El resultado es %.2f", multi);
+				operacion = a * b;
+				System.out.printf("El resultado es %.2f\n", operacion);
 				break;
 
 			case 4:
@@ -53,10 +53,10 @@ public class Principal {
 				a = Leer.datoDouble();
 				System.out.println("Introduzca un número");
 				b = Leer.datoDouble();
-				if (a != 0 && b != 0) {
-					divi = a / b;
-					System.out.printf("El resultado es %.2f", divi);
-				}else {
+				if (b != 0) {
+					operacion = a / b;
+					System.out.printf("El resultado es %.2f\n", operacion);
+				} else {
 					System.out.println("Introduzca un número que no sea cero, por favor");
 				}
 				break;
