@@ -7,12 +7,13 @@ public class Principal {
 		
 		System.out.println("Bienvenido, en este programa vamos a calcular el volumen de un cilindro en cm");
 		
-		double radio=8.0,altura=15.0,volumen=0.0;
+		double radio=8.0,altura=15.0;
 		int dos=2;
 		
 		Cilindro c1=new Cilindro(radio, altura);
 		
-		System.out.printf("%.2f cm",c1.volumenCilindro(dos, volumen));
+		System.out.printf("\nEl volumen del cilindro es de: ");
+		System.out.printf("%.2f cm",c1.volumenCilindro(dos));
 
 	}
 

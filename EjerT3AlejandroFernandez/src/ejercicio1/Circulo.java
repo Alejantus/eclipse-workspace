@@ -16,17 +16,16 @@ public class Circulo {
 		this.radio=radio;
 	}
 	
-	public double calcularCmCuadrado(double areaCm,int dos) {
+	public double calcularAreaCm(int dos) {
 		
-		areaCm=Math.PI*Math.pow(radio, dos);
-		
-		return areaCm;
+		return Math.PI*Math.pow(radio, dos);
+		 
 	}
 	
-	public double calcularMCuadrado(double areaMetro,int dos,int divisor) {
-		areaMetro=Math.PI*Math.pow(radio, dos)/divisor;
+	public double calcularAreaM(double areaMetro,int dos,int divisor) {
 		
-		return areaMetro;
+		return Math.PI*Math.pow(radio, dos)/divisor;
+
 	}
 
 }

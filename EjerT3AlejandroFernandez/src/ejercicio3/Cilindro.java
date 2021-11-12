@@ -26,10 +26,9 @@ public class Cilindro {
 		this.altura=altura;
 	}
 	
-	public double volumenCilindro(int dos, double volumen) {
-		volumen=Math.PI*altura*Math.pow(radio, dos);
-		System.out.printf("El volumen de nuestro cilindro es de: ");
-		return volumen;
+	public double volumenCilindro(int dos) {
+		radio=Math.PI*altura*Math.pow(radio, dos);
+		return radio;
 	}
 
 }
