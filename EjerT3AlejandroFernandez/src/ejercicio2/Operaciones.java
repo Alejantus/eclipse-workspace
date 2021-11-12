@@ -3,7 +3,6 @@ package ejercicio2;
 public class Operaciones {
 	
 	public String positivoONegativo(int num) {
-		String positivoNegativo;
 		if(num>0) {
 			return "Positivo";
 		}else {
