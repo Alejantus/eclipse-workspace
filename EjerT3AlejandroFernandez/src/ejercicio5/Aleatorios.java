@@ -8,27 +8,48 @@ public class Aleatorios {
 	}*/
 	
 	
-	public String generarParoImpar(int min, int max,int dos) {
+	public String generarParoNone(int min, int max,int dos, int parOImpar) {
 		int resultado=0;
 		
 		resultado=(max-min+1)+min;
+		resultado+=parOImpar;
+		
 		
 		if(resultado%dos==0) {
-			return "Par";
+			return "El resultado es par: "+resultado;
 		}else {
-			return "Impar";
+			return "El resultado es none: "+resultado;
 		}
 		
 		
 		
 	}
 	
-	public int generarPrimitiva(int minPrimi, int maxPrimi) {
+	public String generarJuegoChinos(int minChino, int maxChino, int chinos){
 		int resultado=0;
 		
-		resultado = (maxPrimi-minPrimi+1)+minPrimi;
+		resultado=(maxChino-minChino+1)+minChino;
+		
+		if(chinos==resultado) {
+			return "Has acertado";
+		}else {
+			return "Has fallado";
+		}
+		
+		
+	}
+	
+	public int generarPrimitiva(int minPrimi, int maxPrimi, int primi) {
+		int resultado=0;
+		int cont=0;
+				
+		while(cont<primi) {
+			cont++;
+			resultado = (maxPrimi-minPrimi+1)+minPrimi;
+		}
 		
 		return resultado;
+		
 	}
 	
 
