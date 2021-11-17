@@ -2,10 +2,23 @@ package ejercicio5;
 
 public class Aleatorios {
 	
-	/*
-	public int generarQuiniela() {
+	
+	public String generarQuiniela(int quiniela) {
+		int uno=1,dos=2,tres=3;
+		int hasta=3,desde=1,resultado=0;
 		
-	}*/
+		resultado=(hasta-desde+1)+desde;		
+		
+		if(quiniela==uno) {
+			return "El resultado de la quiniela es victoria"+resultado;
+		}else if (quiniela==dos) {
+			return "El resultado de la quiniela es derrota"+resultado;
+		}else if(quiniela==tres) {
+			return "El resultado de la quiniela es empate"+resultado;
+		}
+		return "El resultado es"+resultado;
+		
+	}
 	
 	
 	public String generarParoNone(int min, int max,int dos, int parOImpar) {
@@ -31,9 +44,9 @@ public class Aleatorios {
 		resultado=(maxChino-minChino+1)+minChino;
 		
 		if(chinos==resultado) {
-			return "Has acertado";
+			return "Has acertado ya que el número es "+resultado;
 		}else {
-			return "Has fallado";
+			return "Has fallado ya que el número es "+resultado;
 		}
 		
 		

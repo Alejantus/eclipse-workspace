@@ -8,7 +8,7 @@ public class Principal {
 		// TODO Auto-generated method stub
 		
 		int min=0,max=0,dos=2,parOImpar=0,opcion=0,minChino=0,maxChino=0,chinos=0,minPrimi=0,
-				maxPrimi=0,primi=0;
+				maxPrimi=0,primi=0,quiniela=0;
 		
 		Aleatorios al1=new Aleatorios();
 		
@@ -21,6 +21,10 @@ public class Principal {
 			System.out.println("4. Generar sorteo de la primitiva");
 			opcion = Leer.datoInt();
 			switch (opcion) {
+			case 1:
+				System.out.println("Diga 1 para victoria, 2 para derrotar y 3 para empate");
+				quiniela=Leer.datoInt();
+				System.out.println(al1.generarQuiniela(quiniela));
 			case 2:
 				System.out.println("Diga un número mínimo que quiere generar:");
 				min=Leer.datoInt();
