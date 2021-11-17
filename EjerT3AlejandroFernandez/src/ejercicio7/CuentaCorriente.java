@@ -48,6 +48,10 @@ public class CuentaCorriente {
 		return cambio;
 	}
 	
+	public double consultarSaldo() {
+		return saldo; 
+	}
+	
 	
 	
 

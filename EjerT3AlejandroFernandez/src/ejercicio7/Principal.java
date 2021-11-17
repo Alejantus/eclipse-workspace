@@ -33,6 +33,14 @@ public class Principal {
 				retiro=Leer.datoInt();
 				System.out.printf("Se ha retirado de su cuenta ");
 				System.out.println(cc1.retirarDinero(retiro)+"€");
+				break;
+			case 3:
+				System.out.println("El cambio de euros a dólar en su cuenta actual es de");
+				System.out.println(cc1.cambiarDolar()+"$");
+				break;
+			case 4:
+				System.out.println("Su sueldo actual es de ");
+				System.out.println(cc1.consultarSaldo()+"€");
 			default:
 				System.out.println("Opcion incorrecta");
 				break;
