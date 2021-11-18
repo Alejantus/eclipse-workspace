@@ -3,19 +3,24 @@ package ejercicio2;
 public class Operaciones {
 	
 	public String positivoONegativo(int num) {
+		String result;
 		if(num>0) {
-			return "Positivo";
+			result= "Positivo";
 		}else {
-			return "Negativo";
+			result= "Negativo";
 		}
+		return result;
 	}
 	
 	public String parOImpar(int dos,int num) {
+		String result;
 		if(num%dos==0) {
-			return "Par";
+			result= "Par";
 		}else {
-			return "Impar";
+			result= "Impar";
 		}
+		
+		return result;
 	}
 
 }
