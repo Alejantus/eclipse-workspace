@@ -1,6 +1,6 @@
 package vista;
 
-public class OpcionesMenus { //aquÃ­ vienen todas las opciones para el usuario
+public class OpcionesMenus { //Aquí vienen todas las opciones para el usuario
 	
 	//Menu que sale al principio
 	
@@ -12,7 +12,7 @@ public class OpcionesMenus { //aquÃ­ vienen todas las opciones para el usuario
 	
 	//Menu de la partida
 	
-	public void imprimirMenuPartida() {
+	public void imprimirPartida() {
 		System.out.println("¿Qué quieres hacer?");
 		System.out.println("(1).Crear jugadores");
 		System.out.println("(0).Salir");
@@ -34,20 +34,19 @@ public class OpcionesMenus { //aquÃ­ vienen todas las opciones para el usuario
 	
 	//Menu cuando mueres
 	
-	public void imprimirMenuMuerte() {
+	public void morirPersonaje() {
 		System.out.println("Vaya, has muerto");
 	}
 	
 	//Menu cuando matas a un jugador
 	
-	public void imprimirMenuMatar() {
+	public void matarJugador() {
 		System.out.println("Has matado a ");
-		System.out.println();
 	}
 	
 	//Menu cuando revives
 	
-	public void imprimirMenuRevivir() {
+	public void revivirPersonaje() {
 		System.out.println("Vaya, has revivido, tus vidas han vuelto a");
 	}
 	
@@ -55,7 +54,14 @@ public class OpcionesMenus { //aquÃ­ vienen todas las opciones para el usuario
 	
 	public void imprimirNumeroDado() {
 		System.out.println("Has sacado un");
-		System.out.println();
+	}
+	
+	//Menu para poder reiniciar el juego
+	
+	public void reiniciarPartida() {
+		System.out.println("¿Quiere jugar otra partida?");
+		System.out.println("(1).Jugar otra partida");
+		System.out.println("(0).Salir");
 	}
 
 }
