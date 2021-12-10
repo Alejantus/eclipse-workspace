@@ -63,5 +63,19 @@ public class OpcionesMenus { //Aquí vienen todas las opciones para el usuario
 		System.out.println("(1).Jugar otra partida");
 		System.out.println("(0).Salir");
 	}
+	
+	/**
+	 * Posibles nombres del juego
+	 * 
+	 * Mortal Parchis
+	 * 
+	 * La carrera del parchis
+	 * 
+	 * Nacido para matar
+	 * 
+	 * Muerte Inminente
+	 * 
+	 * PR0_GGRAM3D
+	 */
 
 }
