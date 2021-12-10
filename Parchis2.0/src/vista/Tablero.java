@@ -6,4 +6,8 @@ public class Tablero {
 		int tablero=0;
 		return tablero;
 	}
+	
+	
+
 }
+
