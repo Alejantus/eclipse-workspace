@@ -5,7 +5,7 @@ import java.util.Random;
 public class Aleatorio {
 
 	Random num = new Random(System.nanoTime());
-	public int generarAleatorio() {
-		return num.nextInt(6 - 1 + 1) + 1;
+	public int generarAleatorio(int hasta,int desde) {
+		return num.nextInt(hasta - desde + 1) + desde;
 	}
 }

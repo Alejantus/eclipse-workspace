@@ -52,6 +52,10 @@ public class CuentaCorriente {
 		return saldo; 
 	}
 	
+	public String identificarTitular() {
+		return titular;
+	}
+	
 	
 	
 
