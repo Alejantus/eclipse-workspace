@@ -1,9 +1,9 @@
 package principal;
 
-import lectura.Leer;
 import model.Partida;
 import model.Personajes;
 import model.Tablero;
+import utilidades.Leer;
 
 public class Principal {
 
