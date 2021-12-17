@@ -16,11 +16,5 @@ public class NombrePersonajes {
 	public void setNombres(String[] nombres) {
 		this.nombres = nombres;
 	}
-	
-	public void mostrarNombres() {
-		for (int i = 0; i < nombres.length; i++) {
-			System.out.println("Opción " + (i+1) + "\t" + this.nombres[i]);
-		}
-	}
 
 }

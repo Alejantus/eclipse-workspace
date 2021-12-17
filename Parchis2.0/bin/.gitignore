@@ -1,7 +1,3 @@
-/controller/
-/crud/
-/model/
-/principal/
 /vista/
-/lectura/
-/datos/
+/principal/
+/controller/
