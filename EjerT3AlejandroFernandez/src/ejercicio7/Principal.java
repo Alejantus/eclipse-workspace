@@ -7,8 +7,8 @@ public class Principal {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		int saldo=0,ingreso=0,retiro=0,opcion=0;
-		String titular="Alejandro";
+		int saldo=1000,ingreso=0,retiro=0,opcion=0;
+		String titular="";
 		
 		CuentaCorriente cc1 = new CuentaCorriente(saldo, titular);
 		
@@ -19,6 +19,7 @@ public class Principal {
 			System.out.println("2. Retirar dinero");
 			System.out.println("3. Calcular euros a dólares");
 			System.out.println("4. Consultar saldo");
+			System.out.println("5. Identificarse");
 			System.out.println("0. Salir");
 			opcion=Leer.datoInt();
 			switch (opcion) {
@@ -41,6 +42,11 @@ public class Principal {
 			case 4:
 				System.out.println("Su sueldo actual es de ");
 				System.out.println(cc1.consultarSaldo()+"€");
+				break;
+			case 5:
+				System.out.println("Su nombre es: ");
+				titular=Leer.dato();
+				System.out.printf(cc1.identificarTitular());
 			default:
 				System.out.println("Opcion incorrecta");
 				break;

@@ -16,6 +16,7 @@ public class VistaPartida {
 		System.out.println("  ||  |, (( ||  ||   ||   || || /(   ");
 		System.out.println("_-||-_/   \\/\\\\  \\\\,  \\\\,/ \\\\ |/ {___ ");
 		System.out.println("  ||                        _/       \n\n");
+<<<<<<< HEAD
 		System.out.println();
 		System.out.println("                                                              _,-='`>");
 		System.out.println("                                                        _,.-='`");
@@ -61,6 +62,10 @@ public class VistaPartida {
 		System.out.println("/___________\\");
 	}
 	
+=======
+		}
+	
+>>>>>>> 83e0b7a1230fa3d6b5025daec01779753fa00859
 	//Método que imprime las vidas de un personaje
 	
 	public void imprimirVidas() {

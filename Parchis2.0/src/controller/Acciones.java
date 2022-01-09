@@ -70,7 +70,10 @@ public class Acciones {
 					}else {
 						//Si muere imprime esto, lo devuelve a la posición inicial y le restaura la vida
 						vista.imprimirCombate(danio, "game over 2", p1, p2, lanzarDadoP1, lanzarDadoP2);
+<<<<<<< HEAD
 						vista.imprimirMuerte();
+=======
+>>>>>>> 83e0b7a1230fa3d6b5025daec01779753fa00859
 						p.reiniciarVida(p2);
 						//Mueve el personaje dentro del carril correspondiente. Recibe la matriz del carril del
 						//jugador, la posición actual y el objeto jugador
@@ -89,7 +92,10 @@ public class Acciones {
 						//Si no, imprime el mensaje de derrota, lleva al jugador a la posición inicial
 						//le restaura las 6 vidas
 						vista.imprimirCombate(danio, "game over 1", p1, p2, lanzarDadoP1, lanzarDadoP2);
+<<<<<<< HEAD
 						vista.imprimirMuerte();
+=======
+>>>>>>> 83e0b7a1230fa3d6b5025daec01779753fa00859
 						p.reiniciarVida(p1);
 						//Mueve el personaje dentro del carril correspondiente. Recibe la matriz del carril del
 						//jugador, la posición actual y el objeto jugador
