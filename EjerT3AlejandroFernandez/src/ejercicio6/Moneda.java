@@ -29,5 +29,17 @@ public class Moneda {
 		}
 		return result;
 	}
+	
+	public void darBienvenida() {
+		System.out.println("Bienvenido, vamos a jugar a cara o cruz");
+	}
+	
+	public void seleccionarMoneda() {
+		System.out.println("Diga un número entre el 1 cara y el 2 para cruz");
+	}
+	
+	public void comprobarMensaje() {
+		System.out.println("Vamos a comprobar quien es el ganador");
+	}
 
 }
