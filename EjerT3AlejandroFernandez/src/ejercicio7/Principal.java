@@ -12,15 +12,12 @@ public class Principal {
 		
 		CuentaCorriente cc1 = new CuentaCorriente(saldo, titular);
 		
-		System.out.println("Bienvenido al banco Santander");
+		cc1.mostrarBienvenida();
 		do {
-			System.out.println("¿Qué acción quieres realizar?");
-			System.out.println("1. Ingresar dinero");
-			System.out.println("2. Retirar dinero");
-			System.out.println("3. Calcular euros a dólares");
-			System.out.println("4. Consultar saldo");
-			System.out.println("5. Identificarse");
-			System.out.println("0. Salir");
+			cc1.identificarNombreTitular();
+			titular=Leer.dato();
+			cc1.mostrarNombreTitular();
+			cc1.mostrarAcciones();
 			opcion=Leer.datoInt();
 			switch (opcion) {
 			case 1:
@@ -43,10 +40,6 @@ public class Principal {
 				System.out.println("Su sueldo actual es de ");
 				System.out.println(cc1.consultarSaldo()+"€");
 				break;
-			case 5:
-				System.out.println("Su nombre es: ");
-				titular=Leer.dato();
-				System.out.printf(cc1.identificarTitular());
 			default:
 				System.out.println("Opcion incorrecta");
 				break;

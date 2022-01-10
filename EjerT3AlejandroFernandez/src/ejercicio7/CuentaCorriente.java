@@ -2,9 +2,11 @@ package ejercicio7;
 
 public class CuentaCorriente {
 	
+	//No se puede dar ningun valor e instanciar un objeto
+	
 	private double saldo;
 	
-	private String titular;
+	private String titular;	
 
 	public double getSaldo() {
 		return saldo;
@@ -52,8 +54,27 @@ public class CuentaCorriente {
 		return saldo; 
 	}
 	
-	public String identificarTitular() {
-		return titular;
+	public void mostrarBienvenida() {
+		System.out.println("Bienvenido al banco Santander");
+	}
+	
+	public void mostrarAcciones() {
+		System.out.println("¿Qué acción quieres realizar?");
+		System.out.println("1. Ingresar dinero");
+		System.out.println("2. Retirar dinero");
+		System.out.println("3. Calcular euros a dólares");
+		System.out.println("4. Consultar saldo");
+		System.out.println("5. Identificarse");
+		System.out.println("0. Salir");
+	}
+	
+	public void identificarNombreTitular() {
+		System.out.println("Identificase, escriba su nombre");
+	}
+	
+	public void mostrarNombreTitular() {
+		System.out.println("Usted es: ");
+		System.out.printf(getTitular());
 	}
 	
 	
