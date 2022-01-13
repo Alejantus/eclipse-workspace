@@ -7,7 +7,7 @@ public class Principal {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		int decimo = 0, opcion = 0,desde=0,hasta=0;
+		int decimo = 0, opcion = 0,desde=1,hasta=99999;
 
 		Sorteo s1 = new Sorteo();
 
@@ -28,12 +28,8 @@ public class Principal {
 				System.out.println(s1.comprarDecimo(decimo));
 				break;
 			case 2:
-				System.out.println("Introduzca el número minimo de decimos");
-				desde=Leer.datoInt();
-				System.out.println("Introduzca el número máximo de decimos");
-				hasta=Leer.datoInt();
-				System.out.printf("Se han generado ");
-				System.out.println(Sorteo.generarDecimos(desde, hasta));
+				s1.generarDecimos(desde, hasta);
+				System.out.printf("Se ha realizado el sorteo\n");
 				break;
 			case 3:
 				System.out.println("Vamos a comprobar tu decimo de lotería");
@@ -43,8 +39,9 @@ public class Principal {
 				System.out.println("Vamos a decir quien es el ganador del sorteo de Navidad");
 				System.out.printf("Y el ganador del sorteo es el ");
 				System.out.println(Sorteo.generarGanador(desde, hasta));
-				System.out.printf("Enhorabuena a la/las personas que tengan el decimo");
-				System.out.println(Sorteo.generarGanador(desde, hasta));
+				break;
+			case 0:
+				System.out.println("Hasta luego");
 				break;
 			default:
 				System.out.println("Error,opción incorrecta");

@@ -57,4 +57,10 @@ public class Oficina {
 			System.out.println("Saldo insuficiente");
 		}
 	}
+
+	// Ejemplo si no tenemos una cuenta como atributo
+
+	public void ingresarSin(double cantidad,Cuenta c) {
+		c.setSaldo(c.getSaldo()+cantidad);
+	}
 }

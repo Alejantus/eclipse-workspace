@@ -23,6 +23,7 @@ public class Principal {
 		c=new Cuenta(saldo, nombreTitular);
 		
 		o=new Oficina(c,1);
+		
 		//1.Ingresar
 		//Sin variable
 		System.out.println("Diga dinero a ingresar");
