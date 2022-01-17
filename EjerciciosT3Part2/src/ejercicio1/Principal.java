@@ -7,9 +7,9 @@ public class Principal {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		int nPs=0,opcion=0, numF=0,tam =5,suma=0;
+		int nPs=0,opcion=0, numF=0,tam =5,suma=0,op=0;
 		boolean b = true;
-		double precio=0.0;
+		double precio=0.0,ganancia=0.0;
 		String marca = null,tamanio = null,forma = null,calidad = null;
 		
 		Gestion g =new Gestion(precio, calidad, forma, tamanio, marca);
@@ -55,7 +55,9 @@ public class Principal {
 				g.mostrarComprobarFragilidad(b);
 				break;
 			case 4:
-				
+				System.out.println("Diga un numero entre el 1 y el 5");
+				op = Leer.datoInt();
+				g.calcularVentaPublico(op, ganancia ,suma);
 				break;
 			case 0:
 				System.out.println("Hasta luego.");

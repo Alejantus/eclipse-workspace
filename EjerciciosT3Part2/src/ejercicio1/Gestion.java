@@ -14,11 +14,12 @@ public class Gestion {
 		}
 	}
 	
-	public void calcularVentaPublico(int op, int ganancia,int suma) {
-		
+	public double calcularVentaPublico(int op, double ganancia,double suma) {
 		for (int i = 0; i < lista.length; i++) {
-			//suma = lista[op-1]+lista[op-1]*(50/100);
+			ganancia = lista[op-1].getPrecio()*(50/100);
+			suma = lista[op-1].getPrecio()+ganancia;
 		}
+		return suma;
 	}
 	
 	public void mostrarComprobarFragilidad(boolean b) {
