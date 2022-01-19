@@ -1,10 +1,31 @@
 package ejercicio1;
 
+import java.util.Arrays;
+
 public class Gestion {
 	
-	private int tam = 5;
-	Producto lista[]=new Producto[tam];
+	Producto lista[];
 	
+	public Gestion(Producto[] lista) {
+		super();
+		this.lista = lista;
+	}
+
+	public Producto[] getLista() {
+		return lista;
+	}
+
+
+
+	public void setLista(Producto[] lista) {
+		this.lista = lista;
+	}
+
+	@Override
+	public String toString() {
+		return "Gestion [lista=" + Arrays.toString(lista) + "]";
+	}
+
 	public Gestion(double precio, String marca, String tamanio, String forma, String calidad) {
 	}
 

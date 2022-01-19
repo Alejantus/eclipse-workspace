@@ -12,8 +12,9 @@ public class Cohete {
 		return numCohetes;
 	}
 	
+	/*
 	public static void setNumCohetes(int numCohete) {
 		Cohete.numCohetes = numCohete;
-	}
+	}*/
 
 }

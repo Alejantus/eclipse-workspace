@@ -1,4 +1,4 @@
-package ejercicio1;
+/*package ejercicio1;
 
 import lectura.Leer;
 
@@ -7,14 +7,15 @@ public class Principal {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		int nPs=0,opcion=0, numF=0,tam =5,suma=0,op=0;
+		int nPs=0,opcion=0, numF=0,tam =5,suma=0,op=0,seguir=0;
 		boolean b = true;
 		double precio=0.0,ganancia=0.0;
 		String marca = null,tamanio = null,forma = null,calidad = null;
 		
 		Gestion g =new Gestion(precio, calidad, forma, tamanio, marca);
 		
-		Gestion lista[]=new Gestion[tam];
+		Gestion lista=new Gestion(new Producto[tam]);
+		Producto producto;
 		
 		System.out.println("Bienvenido, a nuestra tienda");
 		
@@ -41,7 +42,9 @@ public class Principal {
 					calidad = Leer.dato();
 					lista[nPs] = new Gestion(precio,marca,tamanio,forma,calidad);
 					nPs++;
-				} while (nPs<lista.length);
+					System.out.println("¿Quieres seguir?");
+					seguir = Leer.datoInt();
+				} while (nPs<lista.length && seguir!=0);
 				break;
 			case 2:
 					g.mostrarLista(nPs);
@@ -70,4 +73,4 @@ public class Principal {
 
 	}
 
-}
+}*/
