@@ -31,7 +31,7 @@ public class Movil {
 		this.modelo = modelo;
 	}
 
-	public int isVendido() {
+	public int getVendido() {
 		return vendido;
 	}
 

@@ -39,8 +39,10 @@ public class Principal {
 
 		//Cuando quiero acceder a solo un valor del array solo tengo que indicar la posicion del array
 		//y despues poner el atributo que queremos enseñar.
+		for (int i = 0; i < lista.length; i++) {
+			System.out.println(lista[i]);
+		}
 		
-		System.out.println(lista[0].getPotencia());
 	}
 
 }

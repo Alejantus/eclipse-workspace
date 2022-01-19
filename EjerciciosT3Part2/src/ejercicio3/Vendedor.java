@@ -34,10 +34,10 @@ public class Vendedor {
 	}
 	
 	public void imprimirVendido(int numV) {
-		if (lista[numV-1].isVendido()==1) {
-			System.out.println("Este móvil esta vendido");
+		if (lista[numV-1].getVendido()==0) {
+			System.out.println(lista[numV-1].getVendido());
 		}else {
-			System.out.println("Este móvil está a la venta");
+			System.out.println(lista[numV-1].getVendido());
 		}
 	}
 }
