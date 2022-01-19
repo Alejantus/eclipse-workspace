@@ -3,10 +3,10 @@ package ejercicio3;
 import java.util.Arrays;
 
 public class Vendedor {
-	
+
 	Movil lista[];
 	private static double totalVendido;
-	
+
 	public Vendedor(Movil[] lista) {
 		super();
 		this.lista = lista;
@@ -31,6 +31,13 @@ public class Vendedor {
 	@Override
 	public String toString() {
 		return "Vendedor [lista=" + Arrays.toString(lista) + "]";
-	}	
-
+	}
+	
+	public void imprimirVendido(int numV) {
+		if (lista[numV-1].isVendido()==1) {
+			System.out.println("Este móvil esta vendido");
+		}else {
+			System.out.println("Este móvil está a la venta");
+		}
+	}
 }
