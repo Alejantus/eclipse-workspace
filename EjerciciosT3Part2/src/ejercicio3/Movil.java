@@ -4,10 +4,10 @@ public class Movil {
 	
 	private String marca;
 	private String modelo;
-	private int vendido;
+	private boolean vendido;
 	private double precio;
 	
-	public Movil(String marca, String modelo, int vendido, double precio) {
+	public Movil(String marca, String modelo, boolean vendido, double precio) {
 		super();
 		this.marca = marca;
 		this.modelo = modelo;
@@ -31,11 +31,11 @@ public class Movil {
 		this.modelo = modelo;
 	}
 
-	public int getVendido() {
+	public boolean isVendido() {
 		return vendido;
 	}
 
-	public void setVendido(int vendido) {
+	public void setVendido(boolean vendido) {
 		this.vendido = vendido;
 	}
 

@@ -7,11 +7,11 @@ public class Principal {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		int tam,nMs=0,opcion,seguir,numV;
+		int tam,nMs=0,opcion,numB,numV;
 		
 		double precioU;
 		String marca,modelo;
-		int vendido;
+		boolean vendido = false;
 		
 		Movil listado[];
 		Vendedor v;
@@ -37,20 +37,26 @@ public class Principal {
 				System.out.println("¿Cuánto crees que cuesta el móvil?");
 				precioU = Leer.datoDouble();
 				System.out.println("Diga 1 si está vendido y 0 no está vendido");
-				vendido=Leer.datoInt();
+				numB=Leer.datoInt();
+				if(numB==1) {
+					vendido=true;
+				}else if(numB==0) {
+					vendido=false;
+				}
 				listado[nMs]=new Movil(marca,modelo,vendido,precioU);
 				nMs++;
 			} while (listado.length > nMs);
 			break;
 		case 2:
-			for (int i = 0; i < listado.length; i++) {
-				System.out.println(listado[i]);
-			}
+			v.imprimirLista();
 			break;
 		case 3:
-			v.imprimirVendido(nMs);
+			v.imprimirVendido();
 			break;
 		case 4:
+			break;
+		case 0:
+			System.out.println("Hasta luego");
 			break;
 		default:
 			System.out.println("Error, opcion incorrecta");

@@ -32,12 +32,31 @@ public class Vendedor {
 	public String toString() {
 		return "Vendedor [lista=" + Arrays.toString(lista) + "]";
 	}
-	
-	public void imprimirVendido(int numV) {
-		if (lista[numV-1].getVendido()==0) {
-			System.out.println(lista[numV-1].getVendido());
-		}else {
-			System.out.println(lista[numV-1].getVendido());
+
+	public void comprobarLista() {
+		for (int i = 0; i < lista.length; i++) {
+			if (lista[i] != null) {
+				System.out.println("Puede seguir con la venta");
+			}
+		}
+	}
+
+	public void imprimirLista() {
+		for (int i = 0; i < lista.length; i++) {
+			System.out.println(lista[i]);
+		}
+	}
+
+	public void imprimirVendido() {
+		for (int i = 0; i < lista.length; i++) {
+
+			if (lista[i].isVendido()) {
+
+			} else {
+				for (int j = 0; j < lista.length; j++) {
+					System.out.println(lista[j]);
+				}
+			}
 		}
 	}
 }
