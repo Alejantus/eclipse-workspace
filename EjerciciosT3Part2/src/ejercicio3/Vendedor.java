@@ -5,7 +5,8 @@ import java.util.Arrays;
 public class Vendedor {
 
 	Movil lista[];
-	private static double totalVendido;
+	public static int totalVendido;
+	public static double totalRecaudado;
 
 	public Vendedor(Movil[] lista) {
 		super();
@@ -20,12 +21,20 @@ public class Vendedor {
 		this.lista = lista;
 	}
 
-	public static double getTotalVendido() {
+	public static int getTotalVendido() {
 		return totalVendido;
 	}
 
-	public static void setTotalVendido(double totalVendido) {
+	public static void setTotalVendido(int totalVendido) {
 		Vendedor.totalVendido = totalVendido;
+	}
+
+	public static double getTotalRecaudado() {
+		return totalRecaudado;
+	}
+
+	public static void setTotalRecaudado(double totalRecaudado) {
+		Vendedor.totalRecaudado = totalRecaudado;
 	}
 
 	@Override
@@ -53,10 +62,20 @@ public class Vendedor {
 			if (lista[i].isVendido()) {
 
 			} else {
-				for (int j = 0; j < lista.length; j++) {
-					System.out.println(lista[j]);
-				}
+				System.out.println(lista[i]);
 			}
 		}
 	}
+	
+	public double calcularPrecioFinal(int numV,int descuento) {
+		int div = 100;
+		double precioFinal=0;
+		
+		precioFinal=lista[numV-1].getPrecio()-(lista[numV-1].getPrecio()*descuento/div);
+		lista[numV-1].setVendido(false);
+		totalRecaudado=precioFinal;
+		totalVendido++;
+		return precioFinal;
+	}
+	
 }

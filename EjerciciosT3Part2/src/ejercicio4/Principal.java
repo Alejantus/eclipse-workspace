@@ -28,6 +28,8 @@ public class Principal {
 				System.out.println("¿Qué acción quieres realizar?");
 				System.out.println("1. Rellenar lista de clientes");
 				System.out.println("2. Realizar IMC de un cliente");
+				System.out.println("3. Mostrar clientes");
+				System.out.println("4. Dar de baja un cliente");
 				opcion = Leer.datoInt();
 				switch (opcion) {
 				case 1:
@@ -55,6 +57,14 @@ public class Principal {
 					System.out.println("Diga que cliente calcular");
 					numC=Leer.datoInt();
 					g.calcularIMCCliente(result, numC);
+					break;
+				case 3:
+					g.imprimirClientes();
+					break;
+				case 4:
+					System.out.println("Diga que cliente quiere dar de baja");
+					numC = Leer.datoInt();
+					
 					break;
 				default:
 					System.out.println("Opcion incorrecta");

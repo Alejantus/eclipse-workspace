@@ -74,7 +74,8 @@ public class Cliente {
 	}
 	
 	public double calcularIMC(double result) {
-		result = getPeso()/Math.pow(getAltura(), 2);
+		double dos = 2.0;
+		result = peso/Math.pow(altura, dos);
 		return result;
 	}
 

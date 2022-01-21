@@ -26,7 +26,21 @@ public class Gimnasio {
 	}
 
 	public void calcularIMCCliente(double suma,int numC) {
-		System.out.println(lista[numC-1].calcularIMC(suma));
+		System.out.printf("%.2f\n",lista[numC-1].calcularIMC(suma));
+	}
+	
+	public void imprimirClientes() {
+		for (int i = 0; i < lista.length; i++) {
+			System.out.println(lista[i]);
+		}
+	}
+	
+	public void darDeBaja(int numC) {
+		if (lista[numC-1].isActivo()) {
+			lista[numC-1].setActivo(false);
+		}else {
+			
+		}
 	}
 
 }
