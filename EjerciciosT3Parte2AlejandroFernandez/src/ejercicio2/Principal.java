@@ -9,7 +9,6 @@ public class Principal {
 
 		int tam,numH;
 		Habitacion listado[] = {new Habitacion (50.0,"Miguel",false,true,true,2,1),new Habitacion (200.0,"Luismi",true,false,true,4,2)};
-		//{new Habitacion (1,50.0,false,"Miguel",2,true,true),new Habitacion(2,200.0,false,"Luismi",2,false,true)};
 		Hotel h;
 		
 		System.out.println("Bienvenido al hotel");

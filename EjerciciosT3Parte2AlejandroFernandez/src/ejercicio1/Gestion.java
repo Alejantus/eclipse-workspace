@@ -15,8 +15,6 @@ public class Gestion {
 		return lista;
 	}
 
-
-
 	public void setLista(Producto[] lista) {
 		this.lista = lista;
 	}
