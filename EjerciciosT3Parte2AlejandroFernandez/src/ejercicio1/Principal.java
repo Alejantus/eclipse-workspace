@@ -1,4 +1,4 @@
-package ejercicio1;
+/*package ejercicio1;
 
 import lectura.Leer;
 
@@ -73,4 +73,4 @@ public class Principal {
 
 	}
 
-}
+}*/

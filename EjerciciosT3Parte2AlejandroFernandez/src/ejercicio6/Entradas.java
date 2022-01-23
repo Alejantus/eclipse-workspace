@@ -13,7 +13,7 @@ public class Entradas {
 		super();
 		this.id = id;
 		this.precio = precio;
-		this.disponible = disponible;
+		this.disponible = true;
 		this.fila = fila;
 		this.butaca = butaca;
 	}

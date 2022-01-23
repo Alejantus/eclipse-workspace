@@ -7,13 +7,11 @@ public class Sala {
 	Entradas lista[];
 	private int id;
 	private static int totalButacas;
-	Entradas e;
 	
-	public Sala(Entradas[] lista, int id, Entradas e) {
+	public Sala(Entradas[] lista, int id) {
 		super();
 		this.lista = lista;
 		this.id = id;
-		this.e = e;
 	}
 
 	public Entradas[] getLista() {
@@ -40,23 +38,31 @@ public class Sala {
 		Sala.totalButacas = totalButacas;
 	}
 
-	public Entradas getE() {
-		return e;
-	}
-
-	public void setE(Entradas e) {
-		this.e = e;
-	}
-
 	@Override
 	public String toString() {
-		return "Sala [lista=" + Arrays.toString(lista) + ", id=" + id + ", e=" + e + "]";
+		return "Sala [lista=" + Arrays.toString(lista) + ", id=" + id + "]";
 	}
 	
+	public void modificarEntrada(double nuevoPrecio) {
+		for (int i = 0; i < lista.length; i++) {
+			lista[i].setPrecio(nuevoPrecio);
+		}
+	}
 	
+	public void comprarEntrada() {
+		for (int i = 0; i < lista.length; i++) {
+			if(lista[i].isDisponible()) {
+				lista[i].setDisponible(false);
+			}
+		}
+	}
 	
-	
-	
-	
+	public double contarRecaudacion() {
+		double recaudacion=0.0;
+		for (int i = 0; i < lista.length; i++) {
+			recaudacion+=lista[i].getPrecio();
+		}
+		return recaudacion;
+	}
 
 }
