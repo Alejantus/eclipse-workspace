@@ -37,4 +37,11 @@ public class Consultor extends Trabajador {
 		return super.calcularPaga()+horas*tarifa;
 	}
 	
+	public void avisarHorasExtras(int tope) {
+		if(horas>tope) {
+			System.out.println("No trabajes tanto");
+		}else {
+			System.out.println("Sigue currando malandrín");
+		}
+	}
 }
