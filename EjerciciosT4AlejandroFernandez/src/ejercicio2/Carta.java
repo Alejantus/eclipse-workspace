@@ -6,8 +6,8 @@ public class Carta extends Documento {
 	private int mes;
 	private int anio;
 	
-	public Carta(String titulo, String texto, String nombreEmpresa, int dia, int mes, int anio) {
-		super(titulo, texto, nombreEmpresa);
+	public Carta(String titulo, String nombreEmpresa, int dia, int mes, int anio) {
+		super(titulo, nombreEmpresa);
 		this.dia = dia;
 		this.mes = mes;
 		this.anio = anio;
@@ -44,6 +44,7 @@ public class Carta extends Documento {
 	
 	public void mostrarDatos() {
 		super.toString();
+		System.out.printf("La fecha es: %d/%d/%d",dia,mes,anio);
 	}
 	
 }

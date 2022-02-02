@@ -8,6 +8,8 @@ public class Principal {
 		Documento d;
 		TarjetaDeVisita t;
 		Carta c;
+		
+		
 
 	}
 
