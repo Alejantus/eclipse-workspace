@@ -1,4 +1,4 @@
-package ejemploHerencia3;
+package ejemploPolimorfismo1;
 
 public abstract class Figura {
 
