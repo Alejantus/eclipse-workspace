@@ -3,7 +3,6 @@ package ejercicio2;
 public class Documento {
 
 	private String titulo;
-	private String texto;
 	private String nombreEmpresa;
 
 	public Documento(String titulo, String nombreEmpresa) {
@@ -32,8 +31,8 @@ public class Documento {
 		return "Documento [titulo=" + titulo + ", nombreEmpresa=" + nombreEmpresa + "]";
 	}
 
-	public void mostrarDatos() {
-		System.out.printf("El titulo del documento es %s,y el nombre de la empresa es %s.\n",titulo,nombreEmpresa);
+	public void mostrarDatos(String titulo,String nombreEmpresa) {
+		System.out.printf("El titulo del documento es %s, y el nombre de la empresa es %s.\n",titulo,nombreEmpresa);
 	}
 
 }

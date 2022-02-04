@@ -42,8 +42,8 @@ public class TarjetaDeVisita extends Documento {
 		return super.toString()+ "TarjetaDeVisita [nombre=" + nombreContacto + ", telefono=" + telefono + ", email=" + email + "]";
 	}
 	
-	public void mostrarDatos() {
-		super.mostrarDatos();
+	public void mostrarDatos(String nombreEmpresa,String titulo,String nombreContacto,int telefono,String email) {
+		super.mostrarDatos(titulo,nombreEmpresa);
 		System.out.printf("Y los datos de contacto son: el nombre es %s, "
 				+ "su número de teléfono es el %d,y su email es %s",nombreContacto,telefono,email);
 	}
