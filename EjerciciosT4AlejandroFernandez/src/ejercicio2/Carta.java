@@ -42,8 +42,13 @@ public class Carta extends Documento {
 		return super.toString()+ "Carta [dia=" + dia + ", mes=" + mes + ", anio=" + anio + "]";
 	}
 	
+<<<<<<< HEAD
 	public void mostrarDatos(String nombreEmpresa,String titulo,int dia,int mes,int anio) {
 		super.mostrarDatos(titulo,nombreEmpresa);
+=======
+	public void mostrarDatos() {
+		super.toString();
+>>>>>>> 7ce430db6ea26355a680fe18b272e5c7da819bd1
 		System.out.printf("La fecha es: %d/%d/%d",dia,mes,anio);
 	}
 	
