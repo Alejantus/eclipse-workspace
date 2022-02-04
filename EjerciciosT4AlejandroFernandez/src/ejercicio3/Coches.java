@@ -32,9 +32,9 @@ public class Coches extends Vehiculos {
 		return super.toString() + "Coches [ruedas=" + ruedas + ", plazas=" + plazas + "]";
 	}
 	
-	public double calcularImpuesto(double cantidadFija) {
-		int division=100,porcentaje=25;
-		return super.calcularImpuesto(cantidadFija)+(super.getCilindrada()*porcentaje/division);
+	public double calcularImpuesto(double porcentaje) {
+		double division=100;
+		return super.calcularImpuesto(porcentaje)+(getCilindrada()*porcentaje/division);
 	}
 
 }

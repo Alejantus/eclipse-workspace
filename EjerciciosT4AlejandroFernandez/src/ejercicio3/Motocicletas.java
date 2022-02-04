@@ -32,8 +32,8 @@ public class Motocicletas extends Vehiculos {
 		return super.toString() + "Motocicletas [ruedas=" + ruedas + ", plazas=" + plazas + "]";
 	}
 	
-	public double calcularImpuesto(double cantidadFija) {
-		int porcentaje=60,division=100;
-		return super.calcularImpuesto(cantidadFija)+(super.getCaballos()*porcentaje/division);
+	public double calcularImpuesto(double porcentaje) {
+		double division=100;
+		return super.calcularImpuesto(porcentaje)+(getCaballos()*porcentaje/division);
 	}
 }

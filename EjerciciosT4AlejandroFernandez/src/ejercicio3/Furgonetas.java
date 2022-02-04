@@ -32,7 +32,7 @@ public class Furgonetas extends Vehiculos {
 		return super.toString() + "Furgonetas [ruedas=" + ruedas + ", plazas=" + plazas + "]";
 	}
 	
-	public double calcularImpuesto(double cantidadFija, double cantidadTransporte) {
-		return super.calcularImpuesto(cantidadFija)+cantidadTransporte;
+	public double calcularImpuesto(double cantidadTransporte) {
+		return super.calcularImpuesto(cantidadTransporte)+cantidadTransporte;
 	}
 }

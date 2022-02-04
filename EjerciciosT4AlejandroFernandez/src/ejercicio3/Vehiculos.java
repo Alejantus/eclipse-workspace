@@ -42,8 +42,8 @@ public class Vehiculos {
 				+ "]";
 	}
 	
-	public double calcularImpuesto(double cantidadFija) {
-		return cantidadFija;
+	public double calcularImpuesto(double procentaje) {
+		return 2*caballos+cilindrada;
 	}
 
 }
