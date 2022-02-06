@@ -1,39 +1,5 @@
 package lectura;
 
-<<<<<<< HEAD
-import java.io.*;
-
-public class Leer {
-
-	public static String dato() {
-		String sdato = " ";
-		try {
-			InputStreamReader isr = new InputStreamReader(System.in);
-			BufferedReader flujoE = new BufferedReader(isr);
-			sdato = flujoE.readLine();
-		} catch (IOException e) {
-			System.out.println("Error " + e.getMessage());
-		}
-		return sdato;
-
-	}
-
-	public static int datoInt() {
-		return Integer.parseInt(dato());
-	}
-
-	public static float datoFloat() {
-		return Float.parseFloat(dato());
-	}
-//Leer un char por teclado
-
-	public static char datoChar() {
-		char c = ' ';
-		try {
-			java.io.BufferedInputStream b = new BufferedInputStream(System.in);
-			c = (char) b.read();
-=======
-
 import java.io.*;
 
 
@@ -72,12 +38,10 @@ public static char datoChar( ){
 		try {
 			java.io.BufferedInputStream b = new BufferedInputStream(System.in);
 			 c = (char) b.read();
->>>>>>> 7ce430db6ea26355a680fe18b272e5c7da819bd1
 		} catch (IOException e) {
 			System.out.println("Error al leer");
 			e.printStackTrace();
 		}
-<<<<<<< HEAD
 		return c;
 	}
 
@@ -94,24 +58,3 @@ public static char datoChar( ){
 	}
 
 }
-=======
-	return c;
-	}
-  
- public static long datoLong()
-  {
-  return Long.parseLong(dato());
-  }
- 
- public static short datoShort()
-  {
-  return Short.parseShort(dato());	
-  }
- 
- public static double datoDouble()
-  {
-  return Double.parseDouble(dato());	
-  }
-  
-}
->>>>>>> 7ce430db6ea26355a680fe18b272e5c7da819bd1

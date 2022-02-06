@@ -14,7 +14,6 @@ public class Principal {
 		TarjetaDeVisita t;
 		Carta c;
 		
-<<<<<<< HEAD
 		System.out.println("El nombre de la empresa es:");
 		nombreEmpresa=Leer.dato();
 		System.out.println("El titulo del documento es:");
@@ -37,10 +36,7 @@ public class Principal {
 		d.mostrarDatos(titulo, nombreEmpresa);
 		t.mostrarDatos(nombreEmpresa, titulo, nombreContacto, telefono, email);
 		c.mostrarDatos(nombreEmpresa, titulo, dia, mes, anio);;
-=======
-		
 
->>>>>>> 7ce430db6ea26355a680fe18b272e5c7da819bd1
 	}
 
 }
