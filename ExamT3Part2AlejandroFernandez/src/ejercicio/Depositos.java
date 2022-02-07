@@ -52,9 +52,11 @@ public class Depositos {
 		return "Depositos [altura=" + altura + ", radio=" + radio + ", litros=" + litros + ", precio=" + precio + "]";
 	}
 	
-	public void calcularVolumen(double volumen) {
+	public double calcularVolumen() {
 		int potencia=2;
-		volumen=(altura*Math.PI*Math.pow(radio, potencia));				
+		double volumen=0;
+		volumen=(altura*Math.PI*Math.pow(radio, potencia));			
+		return volumen;
 	}
 
 }

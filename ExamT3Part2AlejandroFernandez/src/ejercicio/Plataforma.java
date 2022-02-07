@@ -38,23 +38,6 @@ public class Plataforma {
 	public String toString() {
 		return "Plataforma [lista=" + Arrays.toString(lista) + "]";
 	}
-
-	public void agregarDeposito(int tam) {
-		System.out.println("¿Cuántos depósitos vas a gestionar?");
-		tam = Leer.datoInt();
-		lista = new Depositos[tam];
-		for (int i = 0; i < lista.length; i++) {
-			System.out.println("¿Cuánto mide de alto el depósito?");
-			lista[i].setAltura(Leer.datoDouble());
-			System.out.println("¿Cuánto mide de radio el depósito?");
-			lista[i].setRadio(Leer.datoDouble());
-			System.out.println("Cuántos litros puede haber en este depósito");
-			lista[i].setLitros(Leer.datoInt());
-			System.out.println("¿Cuánto cuesta este depósito?");
-			lista[i].setPrecio(Leer.datoDouble());
-		}
-		
-	}
 	
 	public double calcularPrecioVenta(int numDs,int porcentaje) {
 		int cien=100;
