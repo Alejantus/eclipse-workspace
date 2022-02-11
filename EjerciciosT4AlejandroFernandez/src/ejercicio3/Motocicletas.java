@@ -34,6 +34,6 @@ public class Motocicletas extends Vehiculos {
 	
 	public double calcularImpuesto(double porcentaje) {
 		double division=100;
-		return super.calcularImpuesto(porcentaje)+(getCaballos()*porcentaje/division);
+		return super.calcularImpuesto(porcentaje)+(getCaballos());
 	}
 }
