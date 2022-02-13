@@ -2,24 +2,24 @@ package ejercicio4;
 
 public class Electronica extends Producto {
 
-	private double peso;
+	private String	marca;
 
-	public Electronica(double precioUnitario, String nombre, int codigo, double peso) {
+	public Electronica(double precioUnitario, String nombre, int codigo, String marca) {
 		super(precioUnitario, nombre, codigo);
-		this.peso = peso;
+		this.marca = marca;
 	}
 
-	public double getPeso() {
-		return peso;
+	public String getMarca() {
+		return marca;
 	}
 
-	public void setPeso(double peso) {
-		this.peso = peso;
+	public void setMarca(String marca) {
+		this.marca = marca;
 	}
 
 	@Override
 	public String toString() {
-		return "Electronica [peso=" + peso + "]";
+		return "Electronica [marca=" + marca + "]";
 	}
 
 	public double calcularPrecio(double porc) {
