@@ -1,10 +1,10 @@
 package ejercicio4;
 
-public class Alimentación extends Producto{
+public class Alimentacion extends Producto{
 
 	private int alergias;
 
-	public Alimentación(double precioUnitario, String nombre, int codigo, int alergias) {
+	public Alimentacion(double precioUnitario, String nombre, int codigo, int alergias) {
 		super(precioUnitario, nombre, codigo);
 		this.alergias = alergias;
 	}
@@ -19,7 +19,7 @@ public class Alimentación extends Producto{
 
 	@Override
 	public String toString() {
-		return "Alimentación [alergias=" + alergias + "]";
+		return "Alimentaciï¿½n [alergias=" + alergias + "]";
 	}
 	
 	public double calcularPrecio(double porc) {

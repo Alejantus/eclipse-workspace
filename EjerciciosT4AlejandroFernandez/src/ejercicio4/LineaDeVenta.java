@@ -4,6 +4,7 @@ public class LineaDeVenta {
 	
 	private Producto p;
 	private int cantidad;
+	
 	public LineaDeVenta(Producto p, int cantidad) {
 		super();
 		this.p = p;
@@ -31,6 +32,9 @@ public class LineaDeVenta {
 		return "LineaDeVenta [p=" + p + ", cantidad=" + cantidad + "]";
 	}
 	
+	public double calcularPrecioLinea(double porc) {
+		return cantidad * p.calcularPrecio(porc);
+	}
 	
 
 }
