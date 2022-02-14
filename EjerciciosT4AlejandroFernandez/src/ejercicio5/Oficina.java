@@ -24,8 +24,19 @@ public class Oficina {
 		double sueldo=0.0;
 		for (int i = 0; i < lista.length; i++) {
 			sueldo = lista[numE-1].calcularSueldo(porc);
+			
 		}
 		return sueldo;
 	}
-
+	
+	public double calcularEurosGastado(int tam) {
+		double sueldo=0.0;
+		for (int i = 0; i < lista.length; i++) {
+			sueldo+=lista[i].getSueldoBase();
+		}
+		
+		sueldo=sueldo/(double)tam;
+		
+		return sueldo;
+	}
 }

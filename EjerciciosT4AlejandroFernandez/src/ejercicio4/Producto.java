@@ -5,6 +5,7 @@ public abstract class Producto {
 	private double precioUnitario;
 	private String nombre;
 	private int codigo;
+	
 	public Producto(double precioUnitario, String nombre, int codigo) {
 		super();
 		this.precioUnitario = precioUnitario;
@@ -41,7 +42,7 @@ public abstract class Producto {
 		return "Producto [precioUnitario=" + precioUnitario + ", nombre=" + nombre + ", codigo=" + codigo + "]";
 	}
 	
-	public abstract double calcularPrecio(double porc);
+	public abstract double calcularPrecio();
 	
 
 }

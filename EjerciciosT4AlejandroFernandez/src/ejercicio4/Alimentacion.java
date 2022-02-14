@@ -22,8 +22,19 @@ public class Alimentacion extends Producto{
 		return "Alimentaci�n [alergias=" + alergias + "]";
 	}
 	
-	public double calcularPrecio(double porc) {
-		double div=100;
+	public double calcularPrecio() {
+		double div=100,porc=20;
 		return super.getPrecioUnitario()-super.getPrecioUnitario()*(porc/div);
+	}
+	
+	public void avisarCaducidad(int caducidad) {
+		if(caducidad <= 2) {
+			System.out.printf("El producto: %s caducará en %d dias.\n", super.getNombre(), caducidad);
+		}else if(caducidad <= 0){
+			System.out.printf("El producto: %s ha caducado.\n", super.getNombre());
+		}else {
+			System.out.printf("El producto: %s no ha caducado, lo hará en %d días.\n", super.getNombre(), caducidad);
+		}
+		
 	}
 }

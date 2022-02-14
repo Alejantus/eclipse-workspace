@@ -2,18 +2,18 @@ package ejercicio4;
 
 public class Ropa extends Producto {
 	
-	private char talla;
+	private String talla;
 
-	public Ropa(double precioUnitario, String nombre, int codigo, char talla) {
+	public Ropa(double precioUnitario, String nombre, int codigo, String talla) {
 		super(precioUnitario, nombre, codigo);
 		this.talla = talla;
 	}
 
-	public char getTalla() {
+	public String getTalla() {
 		return talla;
 	}
 
-	public void setTalla(char talla) {
+	public void setTalla(String talla) {
 		this.talla = talla;
 	}
 
@@ -23,8 +23,16 @@ public class Ropa extends Producto {
 	}
 
 	@Override
-	public double calcularPrecio(double por) {
-		return 0;
-	}	
+	public double calcularPrecio() {
+		double precioL = 1;
+		double precioXL = 2;
+		
+		if(talla.equals("M")) {
+			return super.getPrecioUnitario();
+		}else if(talla.equals("L")) {
+			return super.getPrecioUnitario() + precioL;
+		}else {
+			return super.getPrecioUnitario() + precioXL;
+		}	}	
 
 }

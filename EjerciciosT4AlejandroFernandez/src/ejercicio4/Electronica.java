@@ -2,34 +2,37 @@ package ejercicio4;
 
 public class Electronica extends Producto {
 
-	private String	marca;
+	private int	impuesto;
 
-	public Electronica(double precioUnitario, String nombre, int codigo, String marca) {
+	public Electronica(double precioUnitario, String nombre, int codigo, int impuesto) {
 		super(precioUnitario, nombre, codigo);
-		this.marca = marca;
+		this.impuesto = impuesto;
 	}
 
-	public String getMarca() {
-		return marca;
+	public int getImpuesto() {
+		return impuesto;
 	}
 
-	public void setMarca(String marca) {
-		this.marca = marca;
+	public void setImpuesto(int impuesto) {
+		this.impuesto = impuesto;
 	}
 
 	@Override
 	public String toString() {
-		return "Electronica [marca=" + marca + "]";
+		return "Electronica [impuesto=" + impuesto + "]";
 	}
 
-	public double calcularPrecio(double porc) {
-		double impuesto=1000,div=100;
+	public double calcularPrecio() {
+		double div=100;
 		if(super.getPrecioUnitario()>impuesto) {
-			return super.getPrecioUnitario()+super.getPrecioUnitario()*(porc/div);
+			return super.getPrecioUnitario()+super.getPrecioUnitario()*(impuesto/div);
 		}else {
 			return super.getPrecioUnitario();
 		}
 	}
-	
+
+	public void imprimirPrecio() {
+		System.out.printf("El precio del dispositivo es de %.2f€.\n", calcularPrecio());
+	}	
 	
 }

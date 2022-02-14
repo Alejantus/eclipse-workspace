@@ -32,9 +32,12 @@ public class LineaDeVenta {
 		return "LineaDeVenta [p=" + p + ", cantidad=" + cantidad + "]";
 	}
 	
-	public double calcularPrecioLinea(double porc) {
-		return cantidad * p.calcularPrecio(porc);
+	public double calcularPrecioLinea() {
+		return cantidad * p.calcularPrecio();
 	}
 	
+	public void imprimirLinea() {
+		System.out.printf("%d\t\t%s\t\t\t%.2f€\t\t\t%.2f€\n", cantidad, p.getNombre(), p.getPrecioUnitario(), calcularPrecioLinea());
+	}
 
 }

@@ -94,7 +94,7 @@ public class Venta {
 	public void listarProductos() {
 		for (int i = 0; i < lista.length; i++) {
 			System.out.println(lista[i]);
-			if(lista[i].getLinea() instanceof Alimentacion) {
+			if(lista[i].getLinea instanceof Alimentacion) {
 				((Alimentacion) lista[i].getLinea()).avisarCaducidad();
 			}
 			;
