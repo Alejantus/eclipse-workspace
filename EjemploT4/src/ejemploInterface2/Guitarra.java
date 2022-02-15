@@ -1,4 +1,4 @@
-package ejercicioInterface2;
+package ejemploInterface2;
 
 public class Guitarra implements IInstrumento {
 

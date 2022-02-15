@@ -39,4 +39,10 @@ public class Oficina {
 		
 		return sueldo;
 	}
+	
+	public String felicitarEmpleado(int numE) {
+		if(lista[numE-1] instanceof EmpleadoAComision) {
+			if(lista[numE-i])
+		}
+	}
 }
