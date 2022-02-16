@@ -1,4 +1,4 @@
-package ejercicio6;
+package ejercicioTipoExamen1;
 
 import java.util.Arrays;
 
@@ -35,7 +35,9 @@ public class GestionHabitaciones {
 	public double calcularRecaudado() {
 		double total = 0.0;
 		for (int i = 0; i < lista.length; i++) {
-			total += lista[i].getPrecioBase();
+			if(lista[i].isOcupado()) {
+			total += lista[i].calcularHabitacion();
+			}
 		}
 		return total;
 	}

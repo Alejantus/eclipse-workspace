@@ -1,4 +1,4 @@
-package ejercicio6;
+package ejercicioTipoExamen1;
 
 public class Suite extends Habitacion {
 	

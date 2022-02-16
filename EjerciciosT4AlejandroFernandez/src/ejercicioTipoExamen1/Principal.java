@@ -1,4 +1,4 @@
-package ejercicio6;
+package ejercicioTipoExamen1;
 
 import lectura.Leer;
 
@@ -8,7 +8,8 @@ public class Principal {
 		// TODO Auto-generated method stub
 		int opcion=0,tam=3,numH=0;
 		
-		GestionHabitaciones [] lista = new GestionHabitaciones[tam];
+		Habitacion [] lista = new Habitacion[tam];
+		GestionHabitaciones gh = new GestionHabitaciones(lista);
 		
 		System.out.println("Bienvenido al Hotel Palace");
 		
@@ -25,7 +26,19 @@ public class Principal {
 				System.out.println("Hasta luego, vuelva pronto");
 				break;
 			case 1:
-				System.out.println("¿Qué habitacion quieres ver?");
+				System.out.println("¿Qué habitación quieres ver?");
+				numH=Leer.datoInt();
+				System.out.println(gh.calcularPrecioUnaHab(numH));
+				break;
+			case 2:
+				System.out.println("¿Cuánto ha sido lo recaudado?");
+				System.out.printf("Lo recaudado es %.2f",gh.calcularRecaudado());
+				break;
+			case 3:
+				gh.mostrarFactura(numH);
+				break;
+			case 4:
+				gh.mostrarHabDisp();
 				break;
 			default:
 				System.out.println("Opción incorrecta");
