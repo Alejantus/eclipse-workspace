@@ -32,14 +32,23 @@ public class Suite extends Habitacion {
 	public String toString() {
 		return "Suite [mCuadrados=" + mCuadrados + ", dinero=" + dinero + "]";
 	}
-	
+	/*
 	public double realizarDescuento(double desc) {
 		double div=100;
 		return super.getPrecioBase()-super.getPrecioBase()*desc/div;
+	}*/
+	
+	public double calcularHabitacion(double porc) {
+		double div=100.0;
+		return super.calcularHabitacion(porc)+dinero*(porc/div);
 	}
 	
-	public double calcularHabitacion(double precioServicios) {
-		return super.calcularHabitacion()+precioServicios;
-	}
+	/*
+	 * public void agregarHabitacion(Habitacion h,int numH){
+	 * 	for(i = 0; i<lista.length;i++){
+	 * 		lista[numH]=h;
+	 * 	}
+	 * }
+	 * */
 
 }

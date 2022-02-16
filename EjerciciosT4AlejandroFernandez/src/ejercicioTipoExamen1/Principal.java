@@ -7,6 +7,7 @@ public class Principal {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int opcion=0,tam=3,numH=0;
+		double porc=0.0;
 		
 		Habitacion [] lista = new Habitacion[tam];
 		GestionHabitaciones gh = new GestionHabitaciones(lista);
@@ -19,6 +20,7 @@ public class Principal {
 			System.out.println("2. Calcular recaudado");
 			System.out.println("3. Mostrar factura");
 			System.out.println("4. Mostrar habitaciones libres");
+			System.out.println("5. Añadir habitaciones");
 			System.out.println("0. Salir");
 			opcion=Leer.datoInt();
 			switch (opcion) {
@@ -28,17 +30,17 @@ public class Principal {
 			case 1:
 				System.out.println("¿Qué habitación quieres ver?");
 				numH=Leer.datoInt();
-				System.out.println(gh.calcularPrecioUnaHab(numH));
+				System.out.println(gh.calcularPrecioUnaHab(porc,lista[numH-1]));
 				break;
 			case 2:
 				System.out.println("¿Cuánto ha sido lo recaudado?");
-				System.out.printf("Lo recaudado es %.2f",gh.calcularRecaudado());
+				System.out.printf("Lo recaudado son unos %.2f €",gh.calcularRecaudado(porc,numH));
 				break;
 			case 3:
 				gh.mostrarFactura(numH);
 				break;
 			case 4:
-				gh.mostrarHabDisp();
+				gh.mostrarHabDisp(numH);
 				break;
 			default:
 				System.out.println("Opción incorrecta");

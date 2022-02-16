@@ -63,7 +63,7 @@ public class Habitacion {
 				+ ", diasOcupacion=" + diasOcupacion + ", numOcupantes=" + numOcupantes + "]";
 	}
 	
-	public double calcularHabitacion() {
+	public double calcularHabitacion(double porc) {
 		return precioBase*diasOcupacion;
 	}
 	

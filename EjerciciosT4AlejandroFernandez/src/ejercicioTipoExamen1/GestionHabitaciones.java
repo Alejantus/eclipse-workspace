@@ -24,19 +24,15 @@ public class GestionHabitaciones {
 		return "GestionHabitaciones [lista=" + Arrays.toString(lista) + "]";
 	}
 
-	public double calcularPrecioUnaHab(int numH) {
-		double result = 0.0;
-		for (int i = 0; i < lista.length; i++) {
-			result = lista[numH - 1].calcularHabitacion();
-		}
-		return result;
+	public double calcularPrecioUnaHab(double porc,Habitacion h) {
+		return h.calcularHabitacion(porc);
 	}
 
-	public double calcularRecaudado() {
+	public double calcularRecaudado(double porc,int numH) {
 		double total = 0.0;
-		for (int i = 0; i < lista.length; i++) {
+		for (int i = 0; i < numH; i++) {
 			if(lista[i].isOcupado()) {
-			total += lista[i].calcularHabitacion();
+			total += calcularPrecioUnaHab(porc, lista[i]);
 			}
 		}
 		return total;
@@ -49,8 +45,8 @@ public class GestionHabitaciones {
 		}
 	}
 
-	public void mostrarHabDisp() {
-		for (int i = 0; i < lista.length; i++) {
+	public void mostrarHabDisp(int numH) {
+		for (int i = 0; i < numH; i++) {
 			if (lista[i].isOcupado()) {
 
 			} else {
@@ -58,5 +54,7 @@ public class GestionHabitaciones {
 			}
 		}
 	}
+
+	
 
 }
