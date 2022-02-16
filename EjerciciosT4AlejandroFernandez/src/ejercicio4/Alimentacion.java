@@ -1,6 +1,6 @@
 package ejercicio4;
 
-public class Alimentacion extends Producto{
+public class Alimentacion extends Producto implements IAviso{
 
 	private int alergias;
 
@@ -26,7 +26,7 @@ public class Alimentacion extends Producto{
 		double div=100,porc=20;
 		return super.getPrecioUnitario()-super.getPrecioUnitario()*(porc/div);
 	}
-	
+	/*
 	public void avisarCaducidad(int caducidad) {
 		if(caducidad <= 2) {
 			System.out.printf("El producto: %s caducará en %d dias.\n", super.getNombre(), caducidad);
@@ -34,6 +34,16 @@ public class Alimentacion extends Producto{
 			System.out.printf("El producto: %s ha caducado.\n", super.getNombre());
 		}else {
 			System.out.printf("El producto: %s no ha caducado, lo hará en %d días.\n", super.getNombre(), caducidad);
+		}
+		
+	}*/
+	
+	public void avisarCaducidad(int caducidad) {
+		int dias=2;
+		if (caducidad<=dias) {
+			System.out.printf("El producto: %s caducará en %d dias.\n", super.getNombre(), caducidad);
+		}else {
+			System.out.printf("El producto: %s ha caducado.\n", super.getNombre());
 		}
 		
 	}

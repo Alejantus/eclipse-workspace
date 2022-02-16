@@ -33,13 +33,25 @@ public class ArrayReales implements IEstadisticas {
 	}
 
 	public double calcularMinimo() {
-		// TODO Auto-generated method stub
-		return 0;
+		double menor=0.0;
+		menor = num[0];
+		for (int i = 0; i < num.length; i++) {
+			if(num[i]<menor) {
+				menor = num[i];
+			}
+		}
+		return menor;
 	}
 
 	public double calcularMaximo() {
-		// TODO Auto-generated method stub
-		return 0;
+		double mayor=0.0;
+		mayor = num[0];
+		for (int i = 0; i < num.length; i++) {
+			if(mayor>num[i]) {
+				mayor = num[i];
+			}
+		}
+		return mayor;
 	}
 
 	public double calcularSumatorio() {
