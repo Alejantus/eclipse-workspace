@@ -1,6 +1,6 @@
 package ejercicioTipoExamen1;
 
-public class Suite extends Habitacion {
+public class Suite extends Habitacion implements IDetalle {
 	
 	private double mCuadrados;
 	private double dinero;
@@ -41,6 +41,11 @@ public class Suite extends Habitacion {
 	public double calcularHabitacion(double porc) {
 		double div=100.0;
 		return super.calcularHabitacion(porc)+dinero*(porc/div);
+	}
+
+	@Override
+	public void mostrarDetalle() {
+		System.out.println("Te regalamos una botella");
 	}
 	
 	/*
