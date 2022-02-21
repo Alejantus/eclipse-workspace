@@ -9,11 +9,15 @@ public class Principal {
 		// TODO Auto-generated method stub
 		
 		List <String>lista=new ArrayList<String>();
+		List <Integer>lista2=new ArrayList<Integer>();
 		
 		lista.add("Ángel");
 		lista.add("Miguel");
+		lista2.add(2);
+		lista2.add(13);
 		
 		System.out.println(lista);
+		System.out.println(lista2);
 
 	}
 
