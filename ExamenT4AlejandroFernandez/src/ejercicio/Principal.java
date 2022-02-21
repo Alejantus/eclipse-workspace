@@ -33,9 +33,7 @@ public class Principal {
 				System.out.println("¿Qué cliente quieres calcular la entrada?");
 				f.mostrarListado(numV);
 				numV = Leer.datoInt();
-				// No devuelve ningun valor auqnue los ejecutes/selecciones
-				// System.out.printf("La entrada de este visitante es de
-				// %.2f",f.calcularPrecioEntradaUnVisitante(lista));
+				System.out.printf("La entrada de este visitante es de %.2f",f.calcularPrecioEntradaUnVisitante(lista[numV-1]));
 				break;
 			case 3:
 				System.out.printf("El total recaudado es de %.2f €\n", f.calcularTotalRecaudado(numV));
