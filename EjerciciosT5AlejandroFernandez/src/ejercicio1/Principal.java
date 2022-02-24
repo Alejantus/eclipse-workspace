@@ -6,9 +6,9 @@ public class Principal {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int opcion=0, id=0,urgenteD=0,idAgenda=0;
+		int opcion=0, id=1,idAgenda=0;
 		String titulo,cuerpo;
-		boolean urgente;
+		boolean urgente =false;
 
 		Notas n;
 		Agenda a = new Agenda();
@@ -29,12 +29,7 @@ public class Principal {
 				System.out.println("Introduzca un cuerpo");
 				cuerpo=Leer.dato();
 				System.out.println("Introduzca 1 Si y 2 No");
-				urgenteD=Leer.datoInt();
-				if(urgenteD==1) {
-					urgente = true;
-				}else {
-					urgente = false;
-				}
+				urgente = a.comprobarUrgente(Leer.datoInt());
 				n = new Notas(id++, titulo, cuerpo, urgente);
 				a.agregarNota(n);
 				break;
@@ -42,6 +37,7 @@ public class Principal {
 				a.mostrarNotas();
 				break;
 			case 3:
+				a.mostrarNotas();
 				System.out.println("¿Qué nota quieres quitar?");
 				idAgenda=Leer.datoInt();
 				a.quitarNota(idAgenda);

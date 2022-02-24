@@ -45,19 +45,27 @@ public class Agenda {
 	}
 	
 	public void quitarNota(int idAgenda) {
-		if (idAgenda >= 0 && idAgenda < lista.size()) {
-			lista.remove(idAgenda);
-		}else {
-			System.out.println("No existe.");
+		if (lista.isEmpty() && lista.get(idAgenda-1) != null) {
+			lista.remove(idAgenda-1);
 		}
 	}
 	
 	public void mostrarNotas() {
+
 		for (Notas n : lista) {
 			System.out.printf("ID : %d\n",n.getId());
 			System.out.printf("TITULO : %s\n",n.getTitulo());
-			System.out.printf("CUERPO : %s\n\n",n.getCuerpo());
+			System.out.printf("CUERPO : %s\n",n.getCuerpo());
 		}
+	}
+	
+	public boolean comprobarUrgente(int urgenteDisp) {
+		if(urgenteDisp==1) {
+			return true;
+		}else {
+			return false;
+		}
+
 	}
 
 }
