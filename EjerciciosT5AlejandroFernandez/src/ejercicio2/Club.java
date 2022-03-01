@@ -11,6 +11,10 @@ public class Club {
 	public Club(int id, List<Socio> lista) {
 		super();
 		this.id = id;
+		this.lista = lista;
+	}
+	
+	public Club() {
 		this.lista = new ArrayList<Socio>();
 	}
 
