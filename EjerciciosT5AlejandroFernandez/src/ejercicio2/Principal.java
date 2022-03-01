@@ -18,6 +18,9 @@ public class Principal {
 			System.out.println("¿Qué acciones quieres hacer?");
 			System.out.println("1. Dar de alta a una persona");
 			System.out.println("2. Dar de baja a un socio");
+			System.out.println("3. Mostrar socios");
+			System.out.println("4. Modificar socio");
+			System.out.println("5. Buscar socio");
 			opcion = Leer.datoInt();
 			switch (opcion) {
 			case 1:
@@ -34,6 +37,26 @@ public class Principal {
 				System.out.println("¿Qué socio quieres dar de baja?");
 				idSocio = Leer.datoInt();
 				c.quitarSocio(idSocio);
+				break;
+			case 3:
+				c.mostrarSocios();
+				break;
+			case 4:
+				System.out.println("Introduzca el id de un socio");
+				idSocio = Leer.datoInt();
+				System.out.println("Introduzca un nombre");
+				nombre = Leer.dato();
+				System.out.println("Intrododuzca un numero de socio");
+				nSocio = Leer.dato();
+				System.out.println("Introduzca un dni");
+				dni = Leer.dato();
+				s = new Socio(nombre, dni, nSocio);
+				c.modificarSocio(idSocio, s);
+				break;
+			case 5:
+				System.out.println("Introduzca el id del socio");
+				idSocio = Leer.datoInt();
+				c.buscarNombreSocio(idSocio);
 				break;
 			default:
 				System.out.println("Opcion incorrecta");

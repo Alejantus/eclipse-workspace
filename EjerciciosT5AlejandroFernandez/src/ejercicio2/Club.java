@@ -49,7 +49,27 @@ public class Club {
 		}
 	}
 	
-	public void modificarSocio(int idSocio) {
+	public void mostrarSocios() {
+		for (Socio s : lista) {
+			System.out.printf("NOMBRE : %s",s.getNombre());
+			System.out.printf("Nº SOCIO : %s",s.getnSocio());
+			System.out.printf("DNI- : %s",s.getDni());
+		}
+	}
 	
+	public void modificarSocio(int idSocio, Socio s) {
+		if (lista.isEmpty() && lista.get(idSocio-1) != null) {
+			lista.add(idSocio-1, s);
+		}
+	}
+	
+	public String buscarNombreSocio(int idSocio) {
+		if(idSocio >= 0 && idSocio < lista.size()) {
+			return lista.get(idSocio-1).getNombre();
+		} else {
+			return "No existe dicho socio";
+		}
+		
+		
 	}
 }
