@@ -4,9 +4,9 @@ public class Socio {
 	
 	private String nombre;
 	private String dni;
-	private String nSocio;
+	private int nSocio;
 	
-	public Socio(String nombre, String dni, String nSocio) {
+	public Socio(String nombre, String dni, int nSocio) {
 		super();
 		this.nombre = nombre;
 		this.dni = dni;
@@ -29,11 +29,11 @@ public class Socio {
 		this.dni = dni;
 	}
 
-	public String getnSocio() {
+	public int getnSocio() {
 		return nSocio;
 	}
 
-	public void setnSocio(String nSocio) {
+	public void setnSocio(int nSocio) {
 		this.nSocio = nSocio;
 	}
 

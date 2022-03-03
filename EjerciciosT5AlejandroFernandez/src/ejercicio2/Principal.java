@@ -6,13 +6,13 @@ public class Principal {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int opcion=0,idSocio=0;
-		
-		String nombre,nSocio,dni;
-		
+		int opcion = 0, idSocio = 0, nSocio = 0;
+
+		String nombre, dni;
+
 		Socio s;
 		Club c = new Club();
-		
+
 		System.out.println("Bienvenido a nuestro club");
 		do {
 			System.out.println("¿Qué acciones quieres hacer?");
@@ -21,13 +21,14 @@ public class Principal {
 			System.out.println("3. Mostrar socios");
 			System.out.println("4. Modificar socio");
 			System.out.println("5. Buscar socio");
+			System.out.println("0. Salir");
 			opcion = Leer.datoInt();
 			switch (opcion) {
 			case 1:
 				System.out.println("Introduzca un nombre");
 				nombre = Leer.dato();
 				System.out.println("Intrododuzca un numero de socio");
-				nSocio = Leer.dato();
+				nSocio = Leer.datoInt();
 				System.out.println("Introduzca un dni");
 				dni = Leer.dato();
 				s = new Socio(nombre, dni, nSocio);
@@ -47,22 +48,22 @@ public class Principal {
 				System.out.println("Introduzca un nombre");
 				nombre = Leer.dato();
 				System.out.println("Intrododuzca un numero de socio");
-				nSocio = Leer.dato();
+				nSocio = Leer.datoInt();
 				System.out.println("Introduzca un dni");
 				dni = Leer.dato();
-				s = new Socio(nombre, dni, nSocio);
-				c.modificarSocio(idSocio, s);
+				c.modificarSocio(idSocio, dni, nombre, nSocio);
 				break;
 			case 5:
-				System.out.println("Introduzca el id del socio");
-				idSocio = Leer.datoInt();
-				c.buscarNombreSocio(idSocio);
+				System.out.println("Introduzca un nombre");
+				nombre = Leer.dato();
+				c.buscarNombreSocio(nombre);
+				c.mostrarSocios(nombre);
 				break;
 			default:
 				System.out.println("Opcion incorrecta");
 				break;
 			}
-		} while (opcion!=0);
+		} while (opcion != 0);
 	}
 
 }

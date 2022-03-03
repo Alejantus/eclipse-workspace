@@ -44,32 +44,52 @@ public class Club {
 	}
 	
 	public void quitarSocio(int idSocio) {
-		if (lista.isEmpty() && lista.get(idSocio-1) != null) {
+		if (lista.isEmpty() || lista.get(idSocio-1) != null) {
 			lista.remove(idSocio-1);
 		}
 	}
 	
 	public void mostrarSocios() {
 		for (Socio s : lista) {
-			System.out.printf("NOMBRE : %s",s.getNombre());
-			System.out.printf("Nº SOCIO : %s",s.getnSocio());
-			System.out.printf("DNI- : %s",s.getDni());
+			System.out.printf("NOMBRE : %s\n",s.getNombre());
+			System.out.printf("Nº SOCIO : %s\n",s.getnSocio());
+			System.out.printf("DNI : %s\n\n",s.getDni());
 		}
 	}
 	
-	public void modificarSocio(int idSocio, Socio s) {
-		if (lista.isEmpty() && lista.get(idSocio-1) != null) {
-			lista.add(idSocio-1, s);
+	public void modificarSocio(int idSocio, String dni, String nombre, int nSocio) {
+		if (lista.isEmpty() || lista.get(idSocio-1) != null) {
+			lista.get(idSocio-1).setDni(dni);
+			lista.get(idSocio-1).setNombre(nombre);
+			lista.get(idSocio-1).setnSocio(nSocio);
 		}
 	}
 	
-	public String buscarNombreSocio(int idSocio) {
-		if(idSocio >= 0 && idSocio < lista.size()) {
-			return lista.get(idSocio-1).getNombre();
-		} else {
+	public String buscarNombreSocio(String nombre) {
+		int i = 0;
+		boolean encontrado = false;
+		
+		while (i < lista.size() && !encontrado) {
+			Socio deSocio = lista.get(i);
+			if (deSocio.getNombre().equalsIgnoreCase(nombre)) {
+				encontrado = true;
+			}else {
+				i++;
+			}
+		}
+		if(encontrado) {
+			return lista.get(i).getNombre();
+		}else {
 			return "No existe dicho socio";
 		}
-		
+	}
+	
+	public void mostrarSocios(String nombre) {
+		if (buscarNombreSocio(nombre).equals(null)) {
+			System.out.println("No existe");
+		}else {
+			mostrarSocios();
+		}
 		
 	}
 }
