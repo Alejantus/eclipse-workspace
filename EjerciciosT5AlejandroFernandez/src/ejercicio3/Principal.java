@@ -1,7 +1,6 @@
 package ejercicio3;
 
 import lectura.Leer;
-import utilidades.GestionClase;
 
 public class Principal {
 
@@ -38,7 +37,7 @@ public class Principal {
 			case 3:
 				System.out.println("Introduzca el nombre del alumno que quiere eliminar");
 				nombre = Leer.dato();
-				
+				//gc.quitarAlumno(a, nombre);
 				break;
 			default:
 				System.out.println("Opcion incorrecta");

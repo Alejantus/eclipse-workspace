@@ -1,9 +1,7 @@
-package utilidades;
+package ejercicio3;
 
 import java.util.HashSet;
 import java.util.Set;
-
-import ejercicio3.Alumno;
 
 public class GestionClase {
 
@@ -31,8 +29,8 @@ public class GestionClase {
 		lista.add(a);
 	}
 	
-	public void quitarAlumno(Alumno a) {
-		if(lista.equals(a)) {
+	public void quitarAlumno(Alumno a,String nombre) {
+		if(a.getNombre().equalsIgnoreCase(nombre)) {
 			lista.remove(a);
 		}
 	}
