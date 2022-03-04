@@ -1,7 +1,9 @@
-package ejercicio3;
+package utilidades;
 
 import java.util.HashSet;
 import java.util.Set;
+
+import ejercicio3.Alumno;
 
 public class GestionClase {
 
@@ -30,7 +32,9 @@ public class GestionClase {
 	}
 	
 	public void quitarAlumno(Alumno a) {
-		lista.remove(a);
+		if(lista.equals(a)) {
+			lista.remove(a);
+		}
 	}
 	
 	public void mostrarAlumno() {

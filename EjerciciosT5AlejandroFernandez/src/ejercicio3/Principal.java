@@ -1,6 +1,7 @@
 package ejercicio3;
 
 import lectura.Leer;
+import utilidades.GestionClase;
 
 public class Principal {
 
@@ -18,6 +19,7 @@ public class Principal {
 			System.out.println("¿Qué quieres hacer?");
 			System.out.println("1. Añadir un alumno");
 			System.out.println("2. Mostrar alumnos");
+			System.out.println("3. Eliminar alumno");
 			System.out.println("0. Salir");
 			opcion = Leer.datoInt();
 			switch (opcion) {
@@ -32,6 +34,11 @@ public class Principal {
 				break;
 			case 2:
 				gc.mostrarAlumno();
+				break;
+			case 3:
+				System.out.println("Introduzca el nombre del alumno que quiere eliminar");
+				nombre = Leer.dato();
+				
 				break;
 			default:
 				System.out.println("Opcion incorrecta");
