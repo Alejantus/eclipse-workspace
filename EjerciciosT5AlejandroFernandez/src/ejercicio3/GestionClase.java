@@ -1,43 +1,84 @@
 package ejercicio3;
 
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Set;
 
 public class GestionClase {
 
-	Set <Alumno> lista;
+	Set <Alumno> alumno;
+
+	public GestionClase(Set<Alumno> alumno) {
+		super();
+		this.alumno = alumno;
+	}
 
 	public GestionClase() {
 		super();
-		this.lista = new HashSet<Alumno>();
+		this.alumno = new HashSet<Alumno>();
 	}
 
-	public Set<Alumno> getLista() {
-		return lista;
+	public Set<Alumno> getAlumno() {
+		return alumno;
 	}
 
-	public void setLista(Set<Alumno> lista) {
-		this.lista = lista;
+	public void setLista(Set<Alumno> alumno) {
+		this.alumno = alumno;
 	}
 
 	@Override
 	public String toString() {
-		return "GestionClase [lista=" + lista + "]";
+		return "GestionClase [lista=" + alumno + "]";
 	}
 	
 	public void agregarAlumno(Alumno a) {
-		lista.add(a);
+		alumno.add(a);
 	}
 	
-	public void quitarAlumno(Alumno a,String nombre) {
-		if(a.getNombre().equalsIgnoreCase(nombre)) {
-			lista.remove(a);
+	public Alumno buscarPorId(int id) {
+		Alumno lista= null;
+		
+		for(Alumno a : alumno) {
+			if (a.getIdAlumno()==id) {
+				return a;
+			}
 		}
+		return lista;
+	}
+	
+	public void quitarAlumno(int id) {
+		Alumno a = buscarPorId(id);
 	}
 	
 	public void mostrarAlumno() {
-		System.out.println(lista);
+		System.out.println(alumno);
 	}
+	
+	/*
+	 * public Alumno buscarPorId(int id){
+	 * 	Alumno alumno = null;
+	 * 
+	 * 	for(Alumno a : alumno){
+	 * 		if(a.getIdAlumno==id){
+	 * 			return a;
+	 * 		}
+	 * 	}
+	 * 
+	 * }
+	 * 
+	 * 
+	 * 
+	 * public Alumno buscarPorId2(int id){
+	 * 	Iterator<Alumno> it = alumno.Iterator();
+	 * 	Alumno a;
+	 * 	boolean encontrado;
+	 * 
+	 * 	while(it.hasNext()&& !encontrado){
+	 * 		a = it.next();
+	 * 		if(a.getIdAlumno	
+	 * }
+	 * 
+	 * }*/
 	
 	
 }
