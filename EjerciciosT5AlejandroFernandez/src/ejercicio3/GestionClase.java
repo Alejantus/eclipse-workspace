@@ -2,6 +2,7 @@ package ejercicio3;
 
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.Objects;
 import java.util.Set;
 
 public class GestionClase {
@@ -52,6 +53,11 @@ public class GestionClase {
 	
 	public void mostrarAlumno() {
 		System.out.println(alumno);
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(alumno);
 	}
 	
 	/*
