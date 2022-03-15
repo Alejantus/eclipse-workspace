@@ -35,13 +35,13 @@ public class Agenda {
 		lista.put(c, s);
 	}
 	
-	public Contacto buscarPorNombre(String nombre) {
+	public Contacto buscarPorNombre(String nombre2) {
 		Contacto c;
 		Iterator<Contacto> it = lista.keySet().iterator();
 		boolean encontrado = false;
 		while(it.hasNext() && !encontrado) {
 			c=it.next();
-			if(c.getNombre().equalsIgnoreCase(nombre)) {
+			if(c.getNombre().equalsIgnoreCase(nombre2)) {
 				encontrado=true;
 				return c;
 			}
@@ -59,10 +59,10 @@ public class Agenda {
 	}
 	
 	
-	public boolean modificarContacto(String nombre) {
+	public boolean modificarContacto(String nombre,String nombre2) {
 		Contacto c = buscarPorNombre(nombre);
 		if(c!=null) {
-			c.setNombre(nombre);
+			c.setNombre(nombre2);
 			return true;
 		}
 		return false;
