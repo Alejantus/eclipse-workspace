@@ -58,6 +58,9 @@ public class Principal {
 				nombre2 = Leer.dato();
 				a.modificarContacto(nombre,nombre2);
 				break;
+			case 5:
+				
+				break;
 			default:
 				System.out.println("Opción incorrecta");
 				break;
