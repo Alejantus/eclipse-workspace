@@ -59,5 +59,31 @@ public class Empresa {
 			lista.get(index).setNombre(nombreNuevo);
 		}
 	}
+	
+	public void mensajeEliminacion(boolean b) {
+		if(b) {
+			System.out.println("Se ha eliminado el empleado");
+		}else {
+			System.out.println("No se ha podido eliminar el empleado especificado");
+		}
+	}
+	
+	public void mostrarTrabajadores() {
+		for(Trabajador t : lista) {
+			System.out.printf("DNI : %s",t.getDni());
+			System.out.printf("Nombre : %s",t.getNombre());
+			System.out.printf("Horas : %d",t.getHorasTrabajadas());
+			System.out.printf("Sueldo : %.2f",t.getSueldoFinal());
+		}
+	}
+	
+	public double calcularSueldo(double sueldo, int horasRealizadas,String dni) {
+		int index = buscarPorDni(dni);
+		double total = 0;
+		
+		total = lista.get(index).getSueldoFinal()*lista.get(index).getHorasTrabajadas();
+		
+		return total;
+	}
 
 }
