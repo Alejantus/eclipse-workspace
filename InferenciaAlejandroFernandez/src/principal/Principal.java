@@ -1,7 +1,9 @@
 package principal;
 
+import java.util.Collections;
 import java.util.HashMap;
 
+import controller.CompararPorNombre;
 import crud.CrudEmpleado;
 import lectura.Leer;
 import model.Empleados;
@@ -18,6 +20,8 @@ public class Principal {
 		var nombre = "";
 		var apellidos = "";
 		var nombreSector = "";
+		var idNuevo = "";
+		var b = false;
 		
 		var m = new Menus();
 		
@@ -44,6 +48,24 @@ public class Principal {
 			break;
 		case 2 :
 			cd.mostrarEmpleados();
+			break;
+		case 3:
+			System.out.println("Introduzca el dni de un empleado para poder eleminarlo");
+			idNuevo = Leer.dato();
+			cd.eliminarEmpleado(idNuevo);
+			cd.mostrarConfirmacionEliminar(b);
+			break;
+		case 4:
+			System.out.println("Introduzca el dni de un empleado para poder buscarlo");
+			idNuevo = Leer.dato();
+			cd.buscarEmpleadoPorId(idNuevo);
+			break;
+		case 5:
+			
+			break;
+		case 6:
+			break;
+		case 7:
 			break;
 		default:
 			m.mostrarPorDefecto();

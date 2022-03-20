@@ -41,9 +41,7 @@ public class Empleados {
 
 	@Override
 	public String toString() {
-		return  "Id : " + id + "\n"
-				+ "Nombre : " + nombre + "\n"
-				+ "Apellidos : " + apellido;
+		return "Empleados [id=" + id + ", nombre=" + nombre + ", apellido=" + apellido + "]";
 	}
 
 	@Override
