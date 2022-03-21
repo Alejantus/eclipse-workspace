@@ -47,7 +47,6 @@ public class Principal {
 			lista.put(new Empleados(id,nombre,apellidos), new Sector(nombreSector));
 			break;
 		case 2 :
-			cd.mostrarEmpleados();
 			break;
 		case 3:
 			System.out.println("Introduzca el dni de un empleado para poder eleminarlo");

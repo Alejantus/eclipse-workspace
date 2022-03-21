@@ -36,17 +36,19 @@ public class Agenda {
 	}
 	
 	public Contacto buscarPorNombre(String nombre2) {
-		Contacto c;
+		Contacto c = null;
 		Iterator<Contacto> it = lista.keySet().iterator();
 		boolean encontrado = false;
 		while(it.hasNext() && !encontrado) {
 			c=it.next();
 			if(c.getNombre().equalsIgnoreCase(nombre2)) {
 				encontrado=true;
-				return c;
 			}
 		}
-		return null;
+		if(!encontrado) {
+			c = null;
+		}
+		return c;
 	}
 	
 	public boolean quitarContacto(String nombre) {

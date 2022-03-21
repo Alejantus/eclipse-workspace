@@ -73,9 +73,5 @@ public class CrudEmpleado {
 			System.out.println("No se ha encontrado dicho empleado");
 		}
 	}
-	
-	public void mostrarEmpleados() {
-		
-	}
 
 }
