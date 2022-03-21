@@ -69,8 +69,13 @@ public class Principal {
 		List<Empleados> lista = new ArrayList<Empleados>();
 		
 		var lista2 = new ArrayList<Empleados>();
-		*/
 		
+		var num1 = 1;
+		var num2 = 9;
+				
+		var ejemplo = new ArrayList<Empleados>();
+		ejemplo = null;
+		*/
 
 	}
 
