@@ -1,6 +1,6 @@
 package ejercicio;
 
-public class Visitante implements IEntrada {
+public class Visitante implements IEntrada, Comparable<Visitante> {
 
 	private String nombre;
 	private int id;
@@ -64,6 +64,16 @@ public class Visitante implements IEntrada {
 			total = precioEntrada - (precioEntrada * porc / div);
 		}
 		return total;
+	}
+
+	@Override
+	public int compareTo(Visitante v) {
+		if(id > v.getId()) {
+			return 1;
+		}else if(id < v.getId()) {
+			return -1;
+		}
+		return 0;
 	}
 
 }
