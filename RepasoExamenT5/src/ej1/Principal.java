@@ -81,7 +81,9 @@ public class Principal {
 				cl.mostrarHabitaciones();
 				break;
 			case 5:
-				cs.mostrarHabitacionesOrdenado(lista2);
+				//cs.mostrarHabitacionesOrdenado(lista2);
+				cs.ordenado();
+				cs.mostrarHabitaciones();
 				break;
 			case 6:
 				ch.mostrarHabitaciones(lista3);

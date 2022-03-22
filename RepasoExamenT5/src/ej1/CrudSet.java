@@ -76,7 +76,7 @@ public class CrudSet {
 			System.out.println("*******************************\n");
 		}
 	}
-	
+	/*
 	public void mostrarHabitacionesOrdenado(Set<Habitacion>lista2) {
 		SortedSet<Habitacion> ordenado2 = new TreeSet<Habitacion>(lista2);
 		for(Habitacion h : ordenado2) {
@@ -88,6 +88,11 @@ public class CrudSet {
 			System.out.println("Ocupacion : " + h.getNumOcupantes());
 			System.out.println("*******************************\n");
 		}
+	}*/
+	
+	public SortedSet<Habitacion> ordenado(){
+		SortedSet<Habitacion> ordenado = new TreeSet<Habitacion>(lista);
+		return ordenado;
 	}
 	
 	public void mostrarHabitacionesOrdenadoNombre(Set<Habitacion>lista2) {

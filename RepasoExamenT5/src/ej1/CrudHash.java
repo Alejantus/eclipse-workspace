@@ -72,6 +72,7 @@ public class CrudHash {
 			System.out.println("*******************************\n");
 		}
 	}
+	/*
 	public void mostrarHabitacionesOrdenado(Map<Habitacion,Integer>lista3) {
 		SortedMap<Habitacion, Integer> ordenado3 = new TreeMap<Habitacion, Integer>(lista3);
 		for(Habitacion h : ordenado3.keySet()) {
@@ -83,7 +84,7 @@ public class CrudHash {
 			System.out.println("Ocupacion : " + h.getNumOcupantes());
 			System.out.println("*******************************\n");
 		}
-	}
+	}*/
 	
 	public void mostrarHabitacionesOrdenadoNombre(Map<Habitacion,Integer>lista3) {
 		SortedMap<Habitacion, Integer> ordenado3 = new TreeMap<Habitacion, Integer>(new CompararNombre());
