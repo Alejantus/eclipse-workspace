@@ -2,6 +2,8 @@ package ej1;
 
 import java.util.Iterator;
 import java.util.Map;
+import java.util.SortedMap;
+import java.util.TreeMap;
 
 public class CrudHash {
 	
@@ -36,9 +38,11 @@ public class CrudHash {
 		while(it.hasNext() && !salir) {
 			h = it.next();
 			if(h.getPrecioBase()==precioBase) {
-				salir = true;
-				
+				salir = true;				
 			}
+		}
+		if(!salir) {
+			h = null;
 		}
 		return h;
 	}
@@ -57,7 +61,7 @@ public class CrudHash {
 		}
 	}
 	
-	public void mostrarHabitaciones() {
+	public void mostrarHabitaciones(Map<Habitacion,Integer> lista3) {
 		for (Habitacion h : lista.keySet()) {
 			System.out.println("*******************************");
 			System.out.println("Precio : " + h.getPrecioBase());
@@ -65,7 +69,33 @@ public class CrudHash {
 			System.out.println("Ocupado : " + h.isOcupacion());
 			System.out.println("Dias : " + h.getDias());
 			System.out.println("Ocupacion : " + h.getNumOcupantes());
+			System.out.println("*******************************\n");
+		}
+	}
+	public void mostrarHabitacionesOrdenado(Map<Habitacion,Integer>lista3) {
+		SortedMap<Habitacion, Integer> ordenado3 = new TreeMap<Habitacion, Integer>(lista3);
+		for(Habitacion h : ordenado3.keySet()) {
 			System.out.println("*******************************");
+			System.out.println("Precio : " + h.getPrecioBase());
+			System.out.println("Nombre : " + h.getNombre());
+			System.out.println("Ocupado : " + h.isOcupacion());
+			System.out.println("Dias : " + h.getDias());
+			System.out.println("Ocupacion : " + h.getNumOcupantes());
+			System.out.println("*******************************\n");
+		}
+	}
+	
+	public void mostrarHabitacionesOrdenadoNombre(Map<Habitacion,Integer>lista3) {
+		SortedMap<Habitacion, Integer> ordenado3 = new TreeMap<Habitacion, Integer>(new CompararNombre());
+		ordenado3.putAll(lista3);
+		for(Habitacion h : ordenado3.keySet()) {
+			System.out.println("*******************************");
+			System.out.println("Precio : " + h.getPrecioBase());
+			System.out.println("Nombre : " + h.getNombre());
+			System.out.println("Ocupado : " + h.isOcupacion());
+			System.out.println("Dias : " + h.getDias());
+			System.out.println("Ocupacion : " + h.getNumOcupantes());
+			System.out.println("*******************************\n");
 		}
 	}
 	

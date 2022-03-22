@@ -70,10 +70,10 @@ public class Empresa {
 	
 	public void mostrarTrabajadores() {
 		for(Trabajador t : lista) {
-			System.out.printf("DNI : %s",t.getDni());
-			System.out.printf("Nombre : %s",t.getNombre());
-			System.out.printf("Horas : %d",t.getHorasTrabajadas());
-			System.out.printf("Sueldo : %.2f",t.getSueldoFinal());
+			System.out.printf("DNI : %s\n",t.getDni());
+			System.out.printf("Nombre : %s\n",t.getNombre());
+			System.out.printf("Horas : %d\n",t.getHorasTrabajadas());
+			System.out.printf("Sueldo : %.2f\n",t.getSueldoFinal());
 		}
 	}
 	

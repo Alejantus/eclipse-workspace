@@ -39,6 +39,9 @@ public class CrudLista {
 				salir = true;
 			}
 		}
+		if(!salir) {
+			h = null;
+		}
 		return h;
 	}
 
@@ -68,8 +71,21 @@ public class CrudLista {
 			System.out.println("Ocupado : " + h.isOcupacion());
 			System.out.println("Dias : " + h.getDias());
 			System.out.println("Ocupacion : " + h.getNumOcupantes());
-			System.out.println("*******************************");
+			System.out.println("*******************************\n");
 		}
+	}
+	
+	public void mostrarUnaHabitacion(double precioBase) {
+		Habitacion h = buscarHabitacion(precioBase);
+		
+		System.out.println("*******************************");
+		System.out.println("Precio : " + h.getPrecioBase());
+		System.out.println("Nombre : " + h.getNombre());
+		System.out.println("Ocupado : " + h.isOcupacion());
+		System.out.println("Dias : " + h.getDias());
+		System.out.println("Ocupacion : " + h.getNumOcupantes());
+		System.out.println("*******************************\n");
+ 
 	}
 	
 	public void mostrarConfirmacionCreacion(boolean b) {

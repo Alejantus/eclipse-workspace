@@ -18,6 +18,8 @@ public class Principal {
 		
 		List<Trabajador> lista = new ArrayList<Trabajador>();
 		
+		lista.add(new Trabajador("111A", "Alejandro", 13, 51.5));
+		
 		Empresa e = new Empresa(lista);
 		
 		System.out.println("\t\tBienvenido a nuestro programa");

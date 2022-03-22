@@ -2,6 +2,8 @@ package ej1;
 
 import java.util.Iterator;
 import java.util.Set;
+import java.util.SortedSet;
+import java.util.TreeSet;
 
 public class CrudSet {
 	
@@ -39,6 +41,9 @@ public class CrudSet {
 				salir = true;
 			}
 		}
+		if(!salir) {
+			h = null;
+		}
 		return h;
 	}
 	
@@ -68,8 +73,48 @@ public class CrudSet {
 			System.out.println("Ocupado : " + h.isOcupacion());
 			System.out.println("Dias : " + h.getDias());
 			System.out.println("Ocupacion : " + h.getNumOcupantes());
-			System.out.println("*******************************");
+			System.out.println("*******************************\n");
 		}
+	}
+	
+	public void mostrarHabitacionesOrdenado(Set<Habitacion>lista2) {
+		SortedSet<Habitacion> ordenado2 = new TreeSet<Habitacion>(lista2);
+		for(Habitacion h : ordenado2) {
+			System.out.println("*******************************");
+			System.out.println("Precio : " + h.getPrecioBase());
+			System.out.println("Nombre : " + h.getNombre());
+			System.out.println("Ocupado : " + h.isOcupacion());
+			System.out.println("Dias : " + h.getDias());
+			System.out.println("Ocupacion : " + h.getNumOcupantes());
+			System.out.println("*******************************\n");
+		}
+	}
+	
+	public void mostrarHabitacionesOrdenadoNombre(Set<Habitacion>lista2) {
+		SortedSet<Habitacion> ordenado2 = new TreeSet<Habitacion>(new CompararNombre());
+		ordenado2.addAll(lista2);
+		for(Habitacion h : ordenado2) {
+			System.out.println("*******************************");
+			System.out.println("Precio : " + h.getPrecioBase());
+			System.out.println("Nombre : " + h.getNombre());
+			System.out.println("Ocupado : " + h.isOcupacion());
+			System.out.println("Dias : " + h.getDias());
+			System.out.println("Ocupacion : " + h.getNumOcupantes());
+			System.out.println("*******************************\n");
+		}
+	}
+	
+	public void mostarUnaHabitacion(double precioBase) {
+		Habitacion h = buscarHabitacion(precioBase);
+		
+		System.out.println("*******************************");
+		System.out.println("Precio : " + h.getPrecioBase());
+		System.out.println("Nombre : " + h.getNombre());
+		System.out.println("Ocupado : " + h.isOcupacion());
+		System.out.println("Dias : " + h.getDias());
+		System.out.println("Ocupacion : " + h.getNumOcupantes());
+		System.out.println("*******************************\n");
+
 	}
 	
 	public void mostrarConfirmacionCreacion(boolean b) {
