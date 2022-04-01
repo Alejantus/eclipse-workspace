@@ -41,9 +41,9 @@ public class Principal {
 				.max(Comparator.comparingInt(Peliculas::getHoras))
 				.get();
 		
-		System.out.println("Minimo : "+minimo);
+		System.out.println("Minimo = "+minimo);
 		
-		System.out.println("Máximo : "+maximo);
+		System.out.println("Máximo = "+maximo);
 
 	}
 

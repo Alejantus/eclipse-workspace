@@ -31,7 +31,7 @@ public class Peliculas {
 
 	@Override
 	public String toString() {
-		return "Nombre : " + nombre + ", Horas :" + horas ;
+		return "Nombre : " + nombre + ", Horas : " + horas ;
 	}
 
 	@Override
