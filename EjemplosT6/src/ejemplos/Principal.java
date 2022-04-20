@@ -9,12 +9,18 @@ public class Principal {
 	public static int dividir(int numerator, int denominator) throws ArithmeticException {
 		return numerator / denominator; // possible division by zero
 	} // end method quotient
+	
+	public static void comprobarEdad (int edad) throws EdadNegativaExc {
+		if(edad<0) {
+			throw new EdadNegativaExc("No puede haber edad negativa, de momento");
+		}
+	}
 
 	public static void main(String args[]) {
 		Scanner scanner = new Scanner(System.in); // scanner for input
 		boolean continueLoop = true; // determines if more input is needed
 		//Ejemplo en clase:
-		int num,dem,result;
+		int num,den,result,edad;
 		String aux;
 		
 		do {
@@ -25,15 +31,24 @@ public class Principal {
 				System.out.print("Please enter an integer denominator: ");
 				int denominator = scanner.nextInt();*/
 				
+				//Excepción propia
+				
+				System.out.println("Please enter your age");
+				aux = scanner.nextLine();
+				edad = Integer.parseInt(aux);
+				comprobarEdad(edad);
+				
+				/*
 				System.out.println("Please enter an integer numerator");
 				aux = scanner.nextLine();
 				num = Integer.parseInt(aux);
 				System.out.println("Please enter an integer denominator");
 				aux = scanner.nextLine();
-				dem = Integer.parseInt(aux);
-				result = dividir(num, dem);
-				
-				
+				den = Integer.parseInt(aux);
+				result = dividir(num, den);
+				System.out.printf("\nResult: %d / %d = %d\n", num, den, result);
+				continueLoop = false; // input successful; end looping*/
+	
 				/*int result = dividir(numerator, denominator);
 				System.out.printf("\nResult: %d / %d = %d\n", numerator, denominator, result);
 				continueLoop = false; // input successful; end looping*/
@@ -49,6 +64,9 @@ public class Principal {
 			} // end catch
 			catch (NumberFormatException nf) {
 				System.out.println("Solo números animal");
+			}
+			catch (EdadNegativaExc edadExc) {
+				System.out.println(edadExc.getMessage());
 			}
 		} while (continueLoop); // end do...while
 	} // end main
