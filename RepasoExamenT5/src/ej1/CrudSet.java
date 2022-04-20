@@ -1,6 +1,7 @@
 package ej1;
 
 import java.util.Iterator;
+import java.util.Map;
 import java.util.Set;
 import java.util.SortedSet;
 import java.util.TreeSet;
@@ -93,6 +94,14 @@ public class CrudSet {
 	public SortedSet<Habitacion> ordenado(){
 		SortedSet<Habitacion> ordenado = new TreeSet<Habitacion>(lista);
 		return ordenado;
+	}
+	
+	public void mostrarMap(Map<Habitacion,Integer>lista) {
+		for (Map.Entry<Habitacion, Integer> entry : lista.entrySet()) {
+			Habitacion key = entry.getKey();
+			Integer value = entry.getValue();
+			System.out.println(key +" = "+value);
+		}
 	}
 	
 	public void mostrarHabitacionesOrdenadoNombre(Set<Habitacion>lista2) {

@@ -2,6 +2,7 @@ package principal;
 
 import java.util.HashSet;
 
+import controller.Calculos;
 import crud.CrudEmpleado;
 import lectura.Leer;
 import model.Empleados;
@@ -11,6 +12,11 @@ public class Principal {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		
+		/*
+		 * Un programa para poder gestionar una lista
+		 * empleados
+		 */
 
 		var opcion = 0;
 		var id = 0;
@@ -30,6 +36,7 @@ public class Principal {
 		lista.add(new Empleados(3, "Beatriz", "Gomez", "Seg",40));
 		
 		var cd = new CrudEmpleado(lista);
+		var cl = new Calculos();
 		
 		m.mostrarBienvenida();
 
@@ -84,7 +91,7 @@ public class Principal {
 				id = Leer.datoInt();
 				System.out.println("Diga cuanto es el sueldo del empleado");
 				sueldo = Leer.datoDouble();
-				cd.calcularSueldo(sueldo, id);
+				cl.calcularSueldo(sueldo, id);
 				break;
 			default:
 				m.mostrarPorDefecto();

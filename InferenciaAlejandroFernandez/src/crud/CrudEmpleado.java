@@ -93,7 +93,7 @@ public class CrudEmpleado {
 	}
 	
 	/*
-	 * Este método ordenar utilizo la interface Comparable que hay
+	 * Este método sirve para ordenar utilizo la interface Comparable que hay
 	 * en la POJO, lo que quiero conseguir con este método es 
 	 * ordenar por el id
 	 */
@@ -111,14 +111,15 @@ public class CrudEmpleado {
 	}
 	
 	/*
-	 * Este ordenar se utiliza la clase CompararPorNombre
+	 * Este método sirve para ordenar los empleados por nombre
+	 * para ello se utiliza la clase CompararPorNombre
 	 * que en ella utilice la interface Comparator, 
 	 * para poder ordenar la lista lo que haremos será 
-	 * 
+	 * necesario añadir todos los empleados de la colección. 
 	 */
 	public void ordenarPorNombre(){
 		SortedSet<Empleados> ordenado2 = new TreeSet<Empleados>(new CompararPorNombre());
-		ordenado2.addAll(lista);
+		ordenado2.addAll(ordenado2);
 		
 		for(Empleados e : ordenado2) {
 			System.out.println("***********************************");
@@ -130,6 +131,13 @@ public class CrudEmpleado {
 		}
 	}
 	
+	/*
+	 * Este método sirve para ordenar los empleados por nombre
+	 * para ello se utiliza la clase CompararPorNombre
+	 * que en ella utilice la interface Comparator, 
+	 * para poder ordenar la lista lo que haremos será 
+	 * necesario añadir todos los empleados de la colección. 
+	 */
 	public void ordenarPorHoras(){
 		SortedSet<Empleados> ordenado3 = new TreeSet<Empleados>(new CompararPorHoras());
 		ordenado3.addAll(lista);
@@ -142,17 +150,6 @@ public class CrudEmpleado {
 			System.out.printf("Sector : %s\n",e.getNombreSector());
 			System.out.println("***********************************\n");
 		}
-	}
-	
-	/*
-	 * Un método para poder calcular el sueldo de un empleado
-	 * pasándole el id de un empleado para poder asi obtener las horas
-	 * de un empleado.
-	 */
-	public double calcularSueldo(double sueldo,int id) {
-		Empleados e = buscarEmpleadoPorId(id);
-		
-		return sueldo * e.getHorasTrabajadas();
 	}
 
 }

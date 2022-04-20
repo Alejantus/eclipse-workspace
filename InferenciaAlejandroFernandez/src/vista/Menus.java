@@ -7,8 +7,11 @@ import model.Empleados;
 
 public class Menus {
 	
-	private Set<Empleados> lista = new HashSet<Empleados>();
+	Set<Empleados> lista = new HashSet<Empleados>();
 	
+	
+	
+	//Un método para mostrar el menú del programa	 
 	public void mostrarMenus() {
 		System.out.println("\n¿Qué quieres hacer hoy?");
 		System.out.println("1. Añadir un empleado");
@@ -22,14 +25,17 @@ public class Menus {
 		System.out.println("9. Calcular sueldo");
 	}
 	
+	//Un método para mostrar un mensaje de bienvenida
 	public void mostrarBienvenida() {
 		System.out.println("\t\tBienvenido a Grupo MAS");
 	}
 	
+	//Un método para mostrar un mensaje por defecto
 	public void mostrarPorDefecto() {
 		System.out.println("Opción incorrecta, introduzca otra opción por favor");
 	}
 	
+	//Un método para mostrar el listado de empleados
 	public void mostrarLista(Set<Empleados> lista) {
 		for(Empleados e : lista) {
 			System.out.println("***********************************");
