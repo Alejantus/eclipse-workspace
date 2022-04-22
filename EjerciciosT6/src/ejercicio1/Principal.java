@@ -4,14 +4,17 @@ import java.util.Scanner;
 
 public class Principal {
 
-	public static void comprobarNumeros(int a, int b) throws Ecuacion2GradoExc {
+	public static void comprobarNumeros(int a, int b) throws EcuacionDegenerada {
 		if (a == 0 && b != 0) {
-			throw new Ecuacion2GradoExc("No puede haber numeros ");
+			throw new EcuacionDegenerada("No puede haber numeros ");
 		}
 	}
 	
-	public static void comprobarRaiz() throws RaizExc {
-		throw new RaizExc("Como te puede dar este resultado");
+	public static void comprobarRaiz(CEcuacion2Grado ce,int a,int b,int c) throws RaizExc {
+		if(ce.calcularDiscriminante(a, b, c)<0) {
+			throw new RaizExc("Las raíces son complejas");
+		}
+		
 	}
 
 	public static void main(String[] args) {
@@ -32,13 +35,15 @@ public class Principal {
 			aux = sc.nextLine();
 			c = Integer.parseInt(aux);
 			ec.calcularDiscriminante(a, b, c);
-			comprobarNumeros(a, b);
+			comprobarRaiz(ec, a, b, c);
 			x1 = ec.calcularEcX1(a, b, c);
 			x2 = ec.calcularEcX2(a, b, c);
 			System.out.printf("El resultado de x1 es %.2f\n" ,x1);
 			System.out.printf("El resultado de x2 es %.2f" ,x2);
-		} catch (Ecuacion2GradoExc e) {
+		} catch (EcuacionDegenerada e) {
 			System.out.println(e.getMessage());
+		} catch (RaizExc re) {
+			System.out.println(re.getMessage());
 		}
 	}
 }
