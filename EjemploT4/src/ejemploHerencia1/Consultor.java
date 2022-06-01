@@ -28,13 +28,14 @@ public class Consultor extends Trabajador {
 	}
 
 	// El toString solo muestra los atributos de la clase
+	
 	@Override
 	public String toString() {
 		return super.toString() + " Consultor [horas=" + horas + ", tarifa=" + tarifa + "]";
 	}
 	
-	public double calcularPaga() {
-		return super.calcularPaga()+horas*tarifa;
+	public double calcularPaga(double desc) {
+		return super.calcularPaga(desc)+horas*tarifa;
 	}
 	
 	public void avisarHorasExtras(int tope) {

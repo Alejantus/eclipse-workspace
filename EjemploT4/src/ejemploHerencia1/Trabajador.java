@@ -31,7 +31,9 @@ public class Trabajador {
 		return "Trabajador [nombre=" + nombre + ", puesto=" + puesto + "]";
 	}
 	
-	public double calcularPaga() {
-		return (1200-1200*20/100)+35*23;
+	public double calcularPaga(double desc) {
+		
+		
+		return 1200-(1200*desc/100);
 	}
 }
